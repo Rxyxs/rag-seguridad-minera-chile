@@ -1,0 +1,1898 @@
+[
+  {
+    "incident_id": "INC-0029",
+    "narrative_text": "En Andina, durante el turno día, un vehículo liviano que transitaba por Rajo Fase 4 sin pértiga reglamentaria fue impactado por un CAEX CAEX-473 de gran tonelaje que realizaba maniobras de retroceso en la zona de carguío. El operador del CAEX reportó visibilidad reducida por polvo en suspensión. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "atropello_caex",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno día",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0083",
+    "narrative_text": "Un acuñador cayó desde una plataforma suspendida en Patio de acopio de mineral de Los Pelambres, durante el turno noche. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "caida_altura",
+    "severity": "LEVE",
+    "faena": "Los Pelambres",
+    "turno": "turno noche",
+    "ubicacion": "Patio de acopio de mineral",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0123",
+    "narrative_text": "Durante labores de perforación en Nivel 2850 de Los Pelambres, turno noche, un prevencionista de riesgos resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "LEVE",
+    "faena": "Los Pelambres",
+    "turno": "turno noche",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0056",
+    "narrative_text": "Un acuñador reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Chancador Primario N°2, Andina, durante el turno A, en un sector con alta concentración de polvo en suspensión. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno A",
+    "ubicacion": "Chancador Primario N°2",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0073",
+    "narrative_text": "Un operador de perforadora cayó desde una plataforma suspendida en Cámara de Producción 4 de Los Pelambres, durante el turno de relevo. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "caida_altura",
+    "severity": "GRAVE",
+    "faena": "Los Pelambres",
+    "turno": "turno de relevo",
+    "ubicacion": "Cámara de Producción 4",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0065",
+    "narrative_text": "Durante el carguío de explosivos en Zona de Carguío Principal de Andina, turno B, se produjo una detonación prematura mientras el equipo mecanizado de tapado de hoyos operaba a menos de veinte metros de la zona de carguío. Un operador de chancador resultó afectado por la onda expansiva. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "tronadura_prematura",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno B",
+    "ubicacion": "Zona de Carguío Principal",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0026",
+    "narrative_text": "Un supervisor de turno a pie fue atropellado por el CAEX CAEX-443 en Banco 1780 de la faena Radomiro Tomic, durante el turno de relevo. El trabajador no portaba elementos de alta visibilidad al ingresar al área de operación del rajo. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "atropello_caex",
+    "severity": "FATAL",
+    "faena": "Radomiro Tomic",
+    "turno": "turno de relevo",
+    "ubicacion": "Banco 1780",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0103",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-392 en Zona de Carguío Principal, faena El Teniente, durante el turno de relevo. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. La lesión presenta alto potencial de invalidez total y permanente, según la evaluación médica inicial.",
+    "incident_type": "incendio_equipo",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno de relevo",
+    "ubicacion": "Zona de Carguío Principal",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0014",
+    "narrative_text": "En el pique de tránsito de Escondida, la fortificación cedió durante el turno B mientras un mecánico de mantención realizaba mantención en Pique de Ventilación Sur. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno B",
+    "ubicacion": "Pique de Ventilación Sur",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0041",
+    "narrative_text": "Un supervisor de turno sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Patio de acopio de mineral de Escondida, durante el turno noche, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "FATAL",
+    "faena": "Escondida",
+    "turno": "turno noche",
+    "ubicacion": "Patio de acopio de mineral",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0011",
+    "narrative_text": "Durante el turno A en Andina, un mecánico de mantención que realizaba labores en Nivel 3200 fue impactado por un desprendimiento de roca no controlado. La inspección posterior determinó que el sector no contaba con acuñadura reciente y la fortificación presentaba anomalías no reportadas en el turno anterior. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "caida_rocas",
+    "severity": "FATAL",
+    "faena": "Andina",
+    "turno": "turno A",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0085",
+    "narrative_text": "En Nivel 3200 de la mina subterránea Los Pelambres, durante el turno de relevo, un ayudante de tronadura presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "GRAVE",
+    "faena": "Los Pelambres",
+    "turno": "turno de relevo",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0072",
+    "narrative_text": "Durante el carguío de explosivos en Sector Botadero Este de Los Bronces, turno B, se produjo una detonación prematura mientras el equipo mecanizado de tapado de hoyos operaba a menos de veinte metros de la zona de carguío. Un prevencionista de riesgos resultó afectado por la onda expansiva. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "tronadura_prematura",
+    "severity": "GRAVE",
+    "faena": "Los Bronces",
+    "turno": "turno B",
+    "ubicacion": "Sector Botadero Este",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0097",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-285 en Sector Botadero Este, faena Radomiro Tomic, durante el turno noche. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. El trabajador presentó una contusión leve y fue dado de alta tras la atención de primeros auxilios, sin tiempo perdido.",
+    "incident_type": "incendio_equipo",
+    "severity": "LEVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno noche",
+    "ubicacion": "Sector Botadero Este",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0087",
+    "narrative_text": "En Cámara de Producción 4 de la mina subterránea Andina, durante el turno noche, un operador de CAEX presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno noche",
+    "ubicacion": "Cámara de Producción 4",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0045",
+    "narrative_text": "Un operador de perforadora sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Planta de Chancado Secundario de Escondida, durante el turno B, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "FATAL",
+    "faena": "Escondida",
+    "turno": "turno B",
+    "ubicacion": "Planta de Chancado Secundario",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0024",
+    "narrative_text": "En el pique de tránsito de Chuquicamata, la fortificación cedió durante el turno noche mientras un ayudante de tronadura realizaba mantención en Nivel 2850. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno noche",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0100",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-134 en Zona de Carguío Principal, faena Radomiro Tomic, durante el turno A. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "incendio_equipo",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno A",
+    "ubicacion": "Zona de Carguío Principal",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0044",
+    "narrative_text": "Un mecánico de mantención sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Patio de acopio de mineral de El Teniente, durante el turno A, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno A",
+    "ubicacion": "Patio de acopio de mineral",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0040",
+    "narrative_text": "Un prevencionista de riesgos sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Chancador Primario N°2 de Los Pelambres, durante el turno día, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "FATAL",
+    "faena": "Los Pelambres",
+    "turno": "turno día",
+    "ubicacion": "Chancador Primario N°2",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0101",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-144 en Rampa de acceso al rajo, faena Chuquicamata, durante el turno noche. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "incendio_equipo",
+    "severity": "FATAL",
+    "faena": "Chuquicamata",
+    "turno": "turno noche",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0033",
+    "narrative_text": "En Chuquicamata, durante el turno B, un vehículo liviano que transitaba por Rajo Fase 4 sin pértiga reglamentaria fue impactado por un CAEX CAEX-236 de gran tonelaje que realizaba maniobras de retroceso en la zona de carguío. El operador del CAEX reportó visibilidad reducida por polvo en suspensión. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "atropello_caex",
+    "severity": "FATAL",
+    "faena": "Chuquicamata",
+    "turno": "turno B",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0052",
+    "narrative_text": "Un operador de perforadora reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Chancador Primario N°2, Chuquicamata, durante el turno día, en un sector con alta concentración de polvo en suspensión. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "LEVE",
+    "faena": "Chuquicamata",
+    "turno": "turno día",
+    "ubicacion": "Chancador Primario N°2",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0129",
+    "narrative_text": "Durante labores de perforación en Chimenea de traspaso de El Teniente, turno B, un operador de perforadora resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "LEVE",
+    "faena": "El Teniente",
+    "turno": "turno B",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0037",
+    "narrative_text": "Un mecánico de mantención sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Patio de acopio de mineral de Los Bronces, durante el turno día, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "FATAL",
+    "faena": "Los Bronces",
+    "turno": "turno día",
+    "ubicacion": "Patio de acopio de mineral",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0019",
+    "narrative_text": "En el pique de tránsito de Chuquicamata, la fortificación cedió durante el turno A mientras un operador de perforadora realizaba mantención en Rampa Norte. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno A",
+    "ubicacion": "Rampa Norte",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0042",
+    "narrative_text": "Un prevencionista de riesgos sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Correa transportadora CV-14 de El Teniente, durante el turno A, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "FATAL",
+    "faena": "El Teniente",
+    "turno": "turno A",
+    "ubicacion": "Correa transportadora CV-14",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0104",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-236 en Polígono de tronadura B-12, faena Los Pelambres, durante el turno noche. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "incendio_equipo",
+    "severity": "GRAVE",
+    "faena": "Los Pelambres",
+    "turno": "turno noche",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0128",
+    "narrative_text": "Durante labores de perforación en Polígono de tronadura B-12 de Los Bronces, turno A, un operador de chancador resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "LEVE",
+    "faena": "Los Bronces",
+    "turno": "turno A",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0118",
+    "narrative_text": "Un operador de perforadora sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Nivel 2850 de Andina, durante el turno B. Los conductores no habían sido desenergizados previo al inicio de la tarea. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "electrocucion",
+    "severity": "FATAL",
+    "faena": "Andina",
+    "turno": "turno B",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0099",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-341 en Rampa de acceso al rajo, faena Radomiro Tomic, durante el turno día. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "incendio_equipo",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno día",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0093",
+    "narrative_text": "En Nivel 2850 de la mina subterránea Los Bronces, durante el turno día, un supervisor de turno presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "GRAVE",
+    "faena": "Los Bronces",
+    "turno": "turno día",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0049",
+    "narrative_text": "Un mecánico de mantención reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Polígono de tronadura B-12, Los Pelambres, durante el turno día, en un sector con alta concentración de polvo en suspensión. El trabajador presentó una contusión leve y fue dado de alta tras la atención de primeros auxilios, sin tiempo perdido.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "LEVE",
+    "faena": "Los Pelambres",
+    "turno": "turno día",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0034",
+    "narrative_text": "Un prevencionista de riesgos a pie fue atropellado por el CAEX CAEX-180 en Polígono de tronadura B-12 de la faena Los Bronces, durante el turno de relevo. El trabajador no portaba elementos de alta visibilidad al ingresar al área de operación del rajo. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "atropello_caex",
+    "severity": "GRAVE",
+    "faena": "Los Bronces",
+    "turno": "turno de relevo",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0066",
+    "narrative_text": "Durante el carguío de explosivos en Zona de Carguío Principal de Los Pelambres, turno día, se produjo una detonación prematura mientras el equipo mecanizado de tapado de hoyos operaba a menos de veinte metros de la zona de carguío. Un mecánico de mantención resultó afectado por la onda expansiva. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "tronadura_prematura",
+    "severity": "FATAL",
+    "faena": "Los Pelambres",
+    "turno": "turno día",
+    "ubicacion": "Zona de Carguío Principal",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0082",
+    "narrative_text": "Un ayudante de tronadura cayó desde una plataforma suspendida en Chimenea de traspaso de Los Bronces, durante el turno A. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "caida_altura",
+    "severity": "GRAVE",
+    "faena": "Los Bronces",
+    "turno": "turno A",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0004",
+    "narrative_text": "Durante el turno B en Andina, un supervisor de turno que realizaba labores en Pique de Ventilación Sur fue impactado por un desprendimiento de roca no controlado. La inspección posterior determinó que el sector no contaba con acuñadura reciente y la fortificación presentaba anomalías no reportadas en el turno anterior. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "caida_rocas",
+    "severity": "LEVE",
+    "faena": "Andina",
+    "turno": "turno B",
+    "ubicacion": "Pique de Ventilación Sur",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0135",
+    "narrative_text": "Un acuñador sufrió quemaduras al manipular reactivos en Correa transportadora CV-14 de la planta Andina, durante el turno de relevo, sin el EPP químico especificado en la hoja de seguridad del insumo. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "quemadura_quimica",
+    "severity": "FATAL",
+    "faena": "Andina",
+    "turno": "turno de relevo",
+    "ubicacion": "Correa transportadora CV-14",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0062",
+    "narrative_text": "Durante el carguío de explosivos en Polígono de tronadura B-12 de Escondida, turno B, se produjo una detonación prematura mientras el equipo mecanizado de tapado de hoyos operaba a menos de veinte metros de la zona de carguío. Un operador de CAEX resultó afectado por la onda expansiva. La lesión presenta alto potencial de invalidez total y permanente, según la evaluación médica inicial.",
+    "incident_type": "tronadura_prematura",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno B",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0109",
+    "narrative_text": "Un supervisor de turno sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Chimenea de traspaso de Los Bronces, durante el turno día. Los conductores no habían sido desenergizados previo al inicio de la tarea. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "electrocucion",
+    "severity": "GRAVE",
+    "faena": "Los Bronces",
+    "turno": "turno día",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0021",
+    "narrative_text": "En el pique de tránsito de Andina, la fortificación cedió durante el turno B mientras un operador de CAEX realizaba mantención en Nivel 2850. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "FATAL",
+    "faena": "Andina",
+    "turno": "turno B",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0038",
+    "narrative_text": "Un ayudante de tronadura sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Patio de acopio de mineral de Los Bronces, durante el turno de relevo, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "GRAVE",
+    "faena": "Los Bronces",
+    "turno": "turno de relevo",
+    "ubicacion": "Patio de acopio de mineral",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0077",
+    "narrative_text": "Un prevencionista de riesgos cayó desde una plataforma suspendida en Planta de Chancado Secundario de Radomiro Tomic, durante el turno B. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "caida_altura",
+    "severity": "LEVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno B",
+    "ubicacion": "Planta de Chancado Secundario",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0023",
+    "narrative_text": "En el pique de tránsito de Andina, la fortificación cedió durante el turno A mientras un ayudante de tronadura realizaba mantención en Cámara de Producción 4. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "FATAL",
+    "faena": "Andina",
+    "turno": "turno A",
+    "ubicacion": "Cámara de Producción 4",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0088",
+    "narrative_text": "En Chimenea de traspaso de la mina subterránea Escondida, durante el turno de relevo, un prevencionista de riesgos presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "FATAL",
+    "faena": "Escondida",
+    "turno": "turno de relevo",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0140",
+    "narrative_text": "Un acuñador sufrió quemaduras al manipular reactivos en Correa transportadora CV-14 de la planta Escondida, durante el turno A, sin el EPP químico especificado en la hoja de seguridad del insumo. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "quemadura_quimica",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno A",
+    "ubicacion": "Correa transportadora CV-14",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0002",
+    "narrative_text": "Durante el turno B en Escondida, un operador de perforadora que realizaba labores en Nivel 3200 fue impactado por un desprendimiento de roca no controlado. La inspección posterior determinó que el sector no contaba con acuñadura reciente y la fortificación presentaba anomalías no reportadas en el turno anterior. El trabajador presentó una contusión leve y fue dado de alta tras la atención de primeros auxilios, sin tiempo perdido.",
+    "incident_type": "caida_rocas",
+    "severity": "LEVE",
+    "faena": "Escondida",
+    "turno": "turno B",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0071",
+    "narrative_text": "Durante el carguío de explosivos en Banco 1780 de Chuquicamata, turno noche, se produjo una detonación prematura mientras el equipo mecanizado de tapado de hoyos operaba a menos de veinte metros de la zona de carguío. Un operador de chancador resultó afectado por la onda expansiva. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "tronadura_prematura",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno noche",
+    "ubicacion": "Banco 1780",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0081",
+    "narrative_text": "Un operador de CAEX cayó desde una plataforma suspendida en Galería 12 de Los Pelambres, durante el turno día. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. El trabajador presentó una contusión leve y fue dado de alta tras la atención de primeros auxilios, sin tiempo perdido.",
+    "incident_type": "caida_altura",
+    "severity": "LEVE",
+    "faena": "Los Pelambres",
+    "turno": "turno día",
+    "ubicacion": "Galería 12",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0075",
+    "narrative_text": "Un operador de chancador cayó desde una plataforma suspendida en Patio de acopio de mineral de Los Bronces, durante el turno noche. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "caida_altura",
+    "severity": "LEVE",
+    "faena": "Los Bronces",
+    "turno": "turno noche",
+    "ubicacion": "Patio de acopio de mineral",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0115",
+    "narrative_text": "Un acuñador sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Pique de Ventilación Sur de El Teniente, durante el turno A. Los conductores no habían sido desenergizados previo al inicio de la tarea. La lesión presenta alto potencial de invalidez total y permanente, según la evaluación médica inicial.",
+    "incident_type": "electrocucion",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno A",
+    "ubicacion": "Pique de Ventilación Sur",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0035",
+    "narrative_text": "En Escondida, durante el turno de relevo, un vehículo liviano que transitaba por Rajo Fase 4 sin pértiga reglamentaria fue impactado por un CAEX CAEX-130 de gran tonelaje que realizaba maniobras de retroceso en la zona de carguío. El operador del CAEX reportó visibilidad reducida por polvo en suspensión. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "atropello_caex",
+    "severity": "LEVE",
+    "faena": "Escondida",
+    "turno": "turno de relevo",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0067",
+    "narrative_text": "Se registró una tronadura no programada en Banco 1780, faena Radomiro Tomic, durante el turno de relevo, en condiciones de viento superior a cien kilómetros por hora que no fueron evaluadas antes de continuar el carguío de explosivos. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "tronadura_prematura",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno de relevo",
+    "ubicacion": "Banco 1780",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0061",
+    "narrative_text": "Se registró una tronadura no programada en Rampa de acceso al rajo, faena Chuquicamata, durante el turno B, en condiciones de viento superior a cien kilómetros por hora que no fueron evaluadas antes de continuar el carguío de explosivos. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "tronadura_prematura",
+    "severity": "FATAL",
+    "faena": "Chuquicamata",
+    "turno": "turno B",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0055",
+    "narrative_text": "Trabajadores del turno A en Sector Botadero Este de Radomiro Tomic presentaron síntomas respiratorios tras una jornada de perforación sin riego de agua previo ni posterior a la tronadura. Los registros de muestreo periódico de aire no estaban actualizados. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "LEVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno A",
+    "ubicacion": "Sector Botadero Este",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0113",
+    "narrative_text": "Un ayudante de tronadura sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Cámara de Producción 4 de Los Bronces, durante el turno A. Los conductores no habían sido desenergizados previo al inicio de la tarea. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "electrocucion",
+    "severity": "FATAL",
+    "faena": "Los Bronces",
+    "turno": "turno A",
+    "ubicacion": "Cámara de Producción 4",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0001",
+    "narrative_text": "Durante el turno A en Radomiro Tomic, un mecánico de mantención que realizaba labores en Frente de avance Oeste fue impactado por un desprendimiento de roca no controlado. La inspección posterior determinó que el sector no contaba con acuñadura reciente y la fortificación presentaba anomalías no reportadas en el turno anterior. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "caida_rocas",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno A",
+    "ubicacion": "Frente de avance Oeste",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0120",
+    "narrative_text": "Un supervisor de turno sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Chimenea de traspaso de Radomiro Tomic, durante el turno noche. Los conductores no habían sido desenergizados previo al inicio de la tarea. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "electrocucion",
+    "severity": "FATAL",
+    "faena": "Radomiro Tomic",
+    "turno": "turno noche",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0058",
+    "narrative_text": "Un supervisor de turno reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Rampa de acceso al rajo, Andina, durante el turno día, en un sector con alta concentración de polvo en suspensión. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "LEVE",
+    "faena": "Andina",
+    "turno": "turno día",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0080",
+    "narrative_text": "Un operador de perforadora cayó desde una plataforma suspendida en Chimenea de traspaso de Andina, durante el turno día. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. Se registró una lesión menor sin incapacidad laboral, atendida en la posta de la faena.",
+    "incident_type": "caida_altura",
+    "severity": "LEVE",
+    "faena": "Andina",
+    "turno": "turno día",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0010",
+    "narrative_text": "Durante el turno noche en Escondida, un operador de CAEX que realizaba labores en Frente de avance Oeste fue impactado por un desprendimiento de roca no controlado. La inspección posterior determinó que el sector no contaba con acuñadura reciente y la fortificación presentaba anomalías no reportadas en el turno anterior. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "caida_rocas",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno noche",
+    "ubicacion": "Frente de avance Oeste",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0112",
+    "narrative_text": "Un operador de CAEX sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Galería 12 de Escondida, durante el turno B. Los conductores no habían sido desenergizados previo al inicio de la tarea. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "electrocucion",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno B",
+    "ubicacion": "Galería 12",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0022",
+    "narrative_text": "En el pique de tránsito de El Teniente, la fortificación cedió durante el turno de relevo mientras un mecánico de mantención realizaba mantención en Cámara de Producción 4. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "FATAL",
+    "faena": "El Teniente",
+    "turno": "turno de relevo",
+    "ubicacion": "Cámara de Producción 4",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0030",
+    "narrative_text": "En Chuquicamata, durante el turno noche, un vehículo liviano que transitaba por Rampa de acceso al rajo sin pértiga reglamentaria fue impactado por un CAEX CAEX-172 de gran tonelaje que realizaba maniobras de retroceso en la zona de carguío. El operador del CAEX reportó visibilidad reducida por polvo en suspensión. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "atropello_caex",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno noche",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0074",
+    "narrative_text": "Un operador de chancador cayó desde una plataforma suspendida en Chimenea de traspaso de El Teniente, durante el turno A. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "caida_altura",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno A",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0139",
+    "narrative_text": "Un mecánico de mantención sufrió quemaduras al manipular reactivos en Planta de Chancado Secundario de la planta Escondida, durante el turno B, sin el EPP químico especificado en la hoja de seguridad del insumo. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "quemadura_quimica",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno B",
+    "ubicacion": "Planta de Chancado Secundario",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0009",
+    "narrative_text": "Durante el turno A en El Teniente, un supervisor de turno que realizaba labores en Frente de avance Oeste fue impactado por un desprendimiento de roca no controlado. La inspección posterior determinó que el sector no contaba con acuñadura reciente y la fortificación presentaba anomalías no reportadas en el turno anterior. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "caida_rocas",
+    "severity": "FATAL",
+    "faena": "El Teniente",
+    "turno": "turno A",
+    "ubicacion": "Frente de avance Oeste",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0027",
+    "narrative_text": "En Andina, durante el turno de relevo, un vehículo liviano que transitaba por Rampa de acceso al rajo sin pértiga reglamentaria fue impactado por un CAEX CAEX-225 de gran tonelaje que realizaba maniobras de retroceso en la zona de carguío. El operador del CAEX reportó visibilidad reducida por polvo en suspensión. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "atropello_caex",
+    "severity": "FATAL",
+    "faena": "Andina",
+    "turno": "turno de relevo",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0130",
+    "narrative_text": "Durante labores de perforación en Nivel 3200 de Andina, turno día, un acuñador resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno día",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0142",
+    "narrative_text": "Un ayudante de tronadura sufrió quemaduras al manipular reactivos en Correa transportadora CV-14 de la planta Chuquicamata, durante el turno noche, sin el EPP químico especificado en la hoja de seguridad del insumo. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "quemadura_quimica",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno noche",
+    "ubicacion": "Correa transportadora CV-14",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0043",
+    "narrative_text": "Un acuñador sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Planta de Chancado Secundario de Andina, durante el turno de relevo, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno de relevo",
+    "ubicacion": "Planta de Chancado Secundario",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0133",
+    "narrative_text": "Un operador de chancador sufrió quemaduras al manipular reactivos en Patio de acopio de mineral de la planta Chuquicamata, durante el turno día, sin el EPP químico especificado en la hoja de seguridad del insumo. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "quemadura_quimica",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno día",
+    "ubicacion": "Patio de acopio de mineral",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0003",
+    "narrative_text": "Durante el turno de relevo en Andina, un mecánico de mantención que realizaba labores en Cámara de Producción 4 fue impactado por un desprendimiento de roca no controlado. La inspección posterior determinó que el sector no contaba con acuñadura reciente y la fortificación presentaba anomalías no reportadas en el turno anterior. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "caida_rocas",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno de relevo",
+    "ubicacion": "Cámara de Producción 4",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0107",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-318 en Sector Botadero Este, faena Andina, durante el turno noche. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. Se registró una lesión menor sin incapacidad laboral, atendida en la posta de la faena.",
+    "incident_type": "incendio_equipo",
+    "severity": "LEVE",
+    "faena": "Andina",
+    "turno": "turno noche",
+    "ubicacion": "Sector Botadero Este",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0012",
+    "narrative_text": "En Pique de Ventilación Sur de la faena Radomiro Tomic, durante el turno noche, se produjo un derrumbe parcial de la caja de galería sobre un mecánico de mantención. No se había realizado el chequeo de techo y cajas al inicio de la jornada según el procedimiento de acuñadura vigente. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "caida_rocas",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno noche",
+    "ubicacion": "Pique de Ventilación Sur",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0111",
+    "narrative_text": "Un supervisor de turno sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Nivel 3200 de Radomiro Tomic, durante el turno noche. Los conductores no habían sido desenergizados previo al inicio de la tarea. Se registró una lesión menor sin incapacidad laboral, atendida en la posta de la faena.",
+    "incident_type": "electrocucion",
+    "severity": "LEVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno noche",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0016",
+    "narrative_text": "En el pique de tránsito de Los Bronces, la fortificación cedió durante el turno de relevo mientras un supervisor de turno realizaba mantención en Chimenea de traspaso. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "FATAL",
+    "faena": "Los Bronces",
+    "turno": "turno de relevo",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0025",
+    "narrative_text": "En Radomiro Tomic, durante el turno día, un vehículo liviano que transitaba por Polígono de tronadura B-12 sin pértiga reglamentaria fue impactado por un CAEX CAEX-218 de gran tonelaje que realizaba maniobras de retroceso en la zona de carguío. El operador del CAEX reportó visibilidad reducida por polvo en suspensión. El trabajador presentó una contusión leve y fue dado de alta tras la atención de primeros auxilios, sin tiempo perdido.",
+    "incident_type": "atropello_caex",
+    "severity": "LEVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno día",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0102",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-498 en Rampa de acceso al rajo, faena Escondida, durante el turno de relevo. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "incendio_equipo",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno de relevo",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0051",
+    "narrative_text": "Un operador de chancador reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Polígono de tronadura B-12, Radomiro Tomic, durante el turno noche, en un sector con alta concentración de polvo en suspensión. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno noche",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0008",
+    "narrative_text": "Durante el turno noche en Los Pelambres, un operador de chancador que realizaba labores en Nivel 2850 fue impactado por un desprendimiento de roca no controlado. La inspección posterior determinó que el sector no contaba con acuñadura reciente y la fortificación presentaba anomalías no reportadas en el turno anterior. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "caida_rocas",
+    "severity": "GRAVE",
+    "faena": "Los Pelambres",
+    "turno": "turno noche",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0046",
+    "narrative_text": "Un supervisor de turno sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Correa transportadora CV-14 de Radomiro Tomic, durante el turno A, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "FATAL",
+    "faena": "Radomiro Tomic",
+    "turno": "turno A",
+    "ubicacion": "Correa transportadora CV-14",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0106",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-462 en Banco 1780, faena El Teniente, durante el turno día. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "incendio_equipo",
+    "severity": "LEVE",
+    "faena": "El Teniente",
+    "turno": "turno día",
+    "ubicacion": "Banco 1780",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0091",
+    "narrative_text": "En Galería 12 de la mina subterránea El Teniente, durante el turno A, un operador de perforadora presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "FATAL",
+    "faena": "El Teniente",
+    "turno": "turno A",
+    "ubicacion": "Galería 12",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0143",
+    "narrative_text": "Un ayudante de tronadura sufrió quemaduras al manipular reactivos en Planta de Chancado Secundario de la planta El Teniente, durante el turno B, sin el EPP químico especificado en la hoja de seguridad del insumo. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "quemadura_quimica",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno B",
+    "ubicacion": "Planta de Chancado Secundario",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0047",
+    "narrative_text": "Un acuñador sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Chancador Primario N°2 de Escondida, durante el turno día, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "FATAL",
+    "faena": "Escondida",
+    "turno": "turno día",
+    "ubicacion": "Chancador Primario N°2",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0116",
+    "narrative_text": "Un operador de chancador sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Chimenea de traspaso de Andina, durante el turno de relevo. Los conductores no habían sido desenergizados previo al inicio de la tarea. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "electrocucion",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno de relevo",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0092",
+    "narrative_text": "En Chimenea de traspaso de la mina subterránea Andina, durante el turno B, un mecánico de mantención presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno B",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0131",
+    "narrative_text": "Durante labores de perforación en Rajo Fase 4 de Chuquicamata, turno A, un operador de perforadora resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno A",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0136",
+    "narrative_text": "Un prevencionista de riesgos sufrió quemaduras al manipular reactivos en Planta de Chancado Secundario de la planta Andina, durante el turno B, sin el EPP químico especificado en la hoja de seguridad del insumo. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "quemadura_quimica",
+    "severity": "LEVE",
+    "faena": "Andina",
+    "turno": "turno B",
+    "ubicacion": "Planta de Chancado Secundario",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0110",
+    "narrative_text": "Un operador de chancador sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Nivel 3200 de Los Bronces, durante el turno día. Los conductores no habían sido desenergizados previo al inicio de la tarea. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "electrocucion",
+    "severity": "GRAVE",
+    "faena": "Los Bronces",
+    "turno": "turno día",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0089",
+    "narrative_text": "En Nivel 2850 de la mina subterránea El Teniente, durante el turno noche, un supervisor de turno presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "LEVE",
+    "faena": "El Teniente",
+    "turno": "turno noche",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0134",
+    "narrative_text": "Un prevencionista de riesgos sufrió quemaduras al manipular reactivos en Planta de Chancado Secundario de la planta Chuquicamata, durante el turno B, sin el EPP químico especificado en la hoja de seguridad del insumo. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "quemadura_quimica",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno B",
+    "ubicacion": "Planta de Chancado Secundario",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0036",
+    "narrative_text": "En Radomiro Tomic, durante el turno de relevo, un vehículo liviano que transitaba por Rajo Fase 4 sin pértiga reglamentaria fue impactado por un CAEX CAEX-136 de gran tonelaje que realizaba maniobras de retroceso en la zona de carguío. El operador del CAEX reportó visibilidad reducida por polvo en suspensión. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "atropello_caex",
+    "severity": "FATAL",
+    "faena": "Radomiro Tomic",
+    "turno": "turno de relevo",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0126",
+    "narrative_text": "Durante labores de perforación en Sector Botadero Este de Los Bronces, turno día, un ayudante de tronadura resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "GRAVE",
+    "faena": "Los Bronces",
+    "turno": "turno día",
+    "ubicacion": "Sector Botadero Este",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0079",
+    "narrative_text": "Un operador de perforadora cayó desde una plataforma suspendida en Rampa Norte de El Teniente, durante el turno día. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "caida_altura",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno día",
+    "ubicacion": "Rampa Norte",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0063",
+    "narrative_text": "Se registró una tronadura no programada en Polígono de tronadura B-12, faena Radomiro Tomic, durante el turno noche, en condiciones de viento superior a cien kilómetros por hora que no fueron evaluadas antes de continuar el carguío de explosivos. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "tronadura_prematura",
+    "severity": "FATAL",
+    "faena": "Radomiro Tomic",
+    "turno": "turno noche",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0141",
+    "narrative_text": "Un operador de CAEX sufrió quemaduras al manipular reactivos en Planta de Chancado Secundario de la planta Radomiro Tomic, durante el turno de relevo, sin el EPP químico especificado en la hoja de seguridad del insumo. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "quemadura_quimica",
+    "severity": "FATAL",
+    "faena": "Radomiro Tomic",
+    "turno": "turno de relevo",
+    "ubicacion": "Planta de Chancado Secundario",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0127",
+    "narrative_text": "Durante labores de perforación en Rajo Fase 4 de Escondida, turno B, un operador de CAEX resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno B",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0105",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-102 en Rajo Fase 4, faena Chuquicamata, durante el turno de relevo. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "incendio_equipo",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno de relevo",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0020",
+    "narrative_text": "En el pique de tránsito de El Teniente, la fortificación cedió durante el turno A mientras un operador de perforadora realizaba mantención en Frente de avance Oeste. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "FATAL",
+    "faena": "El Teniente",
+    "turno": "turno A",
+    "ubicacion": "Frente de avance Oeste",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0094",
+    "narrative_text": "En Pique de Ventilación Sur de la mina subterránea Andina, durante el turno de relevo, un prevencionista de riesgos presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno de relevo",
+    "ubicacion": "Pique de Ventilación Sur",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0108",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-185 en Rajo Fase 4, faena El Teniente, durante el turno noche. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. La lesión presenta alto potencial de invalidez total y permanente, según la evaluación médica inicial.",
+    "incident_type": "incendio_equipo",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno noche",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0076",
+    "narrative_text": "Un operador de CAEX cayó desde una plataforma suspendida en Rampa Norte de Andina, durante el turno noche. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "caida_altura",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno noche",
+    "ubicacion": "Rampa Norte",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0054",
+    "narrative_text": "Un ayudante de tronadura reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Rampa de acceso al rajo, Los Pelambres, durante el turno día, en un sector con alta concentración de polvo en suspensión. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "LEVE",
+    "faena": "Los Pelambres",
+    "turno": "turno día",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0070",
+    "narrative_text": "Durante el carguío de explosivos en Rajo Fase 4 de El Teniente, turno B, se produjo una detonación prematura mientras el equipo mecanizado de tapado de hoyos operaba a menos de veinte metros de la zona de carguío. Un supervisor de turno resultó afectado por la onda expansiva. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "tronadura_prematura",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno B",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0090",
+    "narrative_text": "En Chimenea de traspaso de la mina subterránea El Teniente, durante el turno día, un ayudante de tronadura presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno día",
+    "ubicacion": "Chimenea de traspaso",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0137",
+    "narrative_text": "Un ayudante de tronadura sufrió quemaduras al manipular reactivos en Sala de Molienda de la planta Radomiro Tomic, durante el turno noche, sin el EPP químico especificado en la hoja de seguridad del insumo. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "quemadura_quimica",
+    "severity": "LEVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno noche",
+    "ubicacion": "Sala de Molienda",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0086",
+    "narrative_text": "En Nivel 3200 de la mina subterránea Escondida, durante el turno A, un operador de chancador presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "LEVE",
+    "faena": "Escondida",
+    "turno": "turno A",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0048",
+    "narrative_text": "Un operador de CAEX sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Patio de acopio de mineral de Los Pelambres, durante el turno A, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "GRAVE",
+    "faena": "Los Pelambres",
+    "turno": "turno A",
+    "ubicacion": "Patio de acopio de mineral",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0059",
+    "narrative_text": "Un operador de chancador reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Zona de Carguío Principal, Escondida, durante el turno noche, en un sector con alta concentración de polvo en suspensión. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno noche",
+    "ubicacion": "Zona de Carguío Principal",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0050",
+    "narrative_text": "Un operador de CAEX reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Chancador Primario N°2, Los Pelambres, durante el turno de relevo, en un sector con alta concentración de polvo en suspensión. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "GRAVE",
+    "faena": "Los Pelambres",
+    "turno": "turno de relevo",
+    "ubicacion": "Chancador Primario N°2",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0124",
+    "narrative_text": "Durante labores de perforación en Pique de Ventilación Sur de El Teniente, turno noche, un mecánico de mantención resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. El incidente no generó lesiones a personas, solo daños menores a equipos.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "LEVE",
+    "faena": "El Teniente",
+    "turno": "turno noche",
+    "ubicacion": "Pique de Ventilación Sur",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0069",
+    "narrative_text": "Se registró una tronadura no programada en Banco 1780, faena Los Bronces, durante el turno A, en condiciones de viento superior a cien kilómetros por hora que no fueron evaluadas antes de continuar el carguío de explosivos. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "tronadura_prematura",
+    "severity": "FATAL",
+    "faena": "Los Bronces",
+    "turno": "turno A",
+    "ubicacion": "Banco 1780",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0114",
+    "narrative_text": "Un operador de chancador sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Galería 12 de Los Bronces, durante el turno B. Los conductores no habían sido desenergizados previo al inicio de la tarea. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "electrocucion",
+    "severity": "FATAL",
+    "faena": "Los Bronces",
+    "turno": "turno B",
+    "ubicacion": "Galería 12",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0031",
+    "narrative_text": "Un acuñador a pie fue atropellado por el CAEX CAEX-126 en Zona de Carguío Principal de la faena Chuquicamata, durante el turno día. El trabajador no portaba elementos de alta visibilidad al ingresar al área de operación del rajo. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "atropello_caex",
+    "severity": "FATAL",
+    "faena": "Chuquicamata",
+    "turno": "turno día",
+    "ubicacion": "Zona de Carguío Principal",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0013",
+    "narrative_text": "En el pique de tránsito de Chuquicamata, la fortificación cedió durante el turno A mientras un mecánico de mantención realizaba mantención en Rampa Norte. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "GRAVE",
+    "faena": "Chuquicamata",
+    "turno": "turno A",
+    "ubicacion": "Rampa Norte",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0125",
+    "narrative_text": "Durante labores de perforación en Pique de Ventilación Sur de El Teniente, turno B, un operador de chancador resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "FATAL",
+    "faena": "El Teniente",
+    "turno": "turno B",
+    "ubicacion": "Pique de Ventilación Sur",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0064",
+    "narrative_text": "Durante el carguío de explosivos en Zona de Carguío Principal de Radomiro Tomic, turno noche, se produjo una detonación prematura mientras el equipo mecanizado de tapado de hoyos operaba a menos de veinte metros de la zona de carguío. Un acuñador resultó afectado por la onda expansiva. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "tronadura_prematura",
+    "severity": "FATAL",
+    "faena": "Radomiro Tomic",
+    "turno": "turno noche",
+    "ubicacion": "Zona de Carguío Principal",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  },
+  {
+    "incident_id": "INC-0039",
+    "narrative_text": "Un operador de CAEX sufrió atrapamiento parcial al intentar destrabar mineral sobredimensionado en Sala de Molienda de Chuquicamata, durante el turno A, con el equipo aún energizado. No se aplicó el procedimiento de bloqueo y etiquetado previo a la intervención. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "atrapamiento_chancador",
+    "severity": "FATAL",
+    "faena": "Chuquicamata",
+    "turno": "turno A",
+    "ubicacion": "Sala de Molienda",
+    "relevant_articles": [
+      "78"
+    ]
+  },
+  {
+    "incident_id": "INC-0005",
+    "narrative_text": "Durante el turno B en Radomiro Tomic, un ayudante de tronadura que realizaba labores en Nivel 2850 fue impactado por un desprendimiento de roca no controlado. La inspección posterior determinó que el sector no contaba con acuñadura reciente y la fortificación presentaba anomalías no reportadas en el turno anterior. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "caida_rocas",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno B",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0122",
+    "narrative_text": "Durante labores de perforación en Polígono de tronadura B-12 de El Teniente, turno B, un supervisor de turno resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "LEVE",
+    "faena": "El Teniente",
+    "turno": "turno B",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0006",
+    "narrative_text": "En Cámara de Producción 4 de la faena Escondida, durante el turno día, se produjo un derrumbe parcial de la caja de galería sobre un acuñador. No se había realizado el chequeo de techo y cajas al inicio de la jornada según el procedimiento de acuñadura vigente. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "caida_rocas",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno día",
+    "ubicacion": "Cámara de Producción 4",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0018",
+    "narrative_text": "En el pique de tránsito de Radomiro Tomic, la fortificación cedió durante el turno A mientras un acuñador realizaba mantención en Rampa Norte. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno A",
+    "ubicacion": "Rampa Norte",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0015",
+    "narrative_text": "En el pique de tránsito de Los Pelambres, la fortificación cedió durante el turno día mientras un operador de CAEX realizaba mantención en Rampa Norte. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "GRAVE",
+    "faena": "Los Pelambres",
+    "turno": "turno día",
+    "ubicacion": "Rampa Norte",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0053",
+    "narrative_text": "Un operador de perforadora reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Zona de Carguío Principal, El Teniente, durante el turno noche, en un sector con alta concentración de polvo en suspensión. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "LEVE",
+    "faena": "El Teniente",
+    "turno": "turno noche",
+    "ubicacion": "Zona de Carguío Principal",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0132",
+    "narrative_text": "Durante labores de perforación en Sector Botadero Este de El Teniente, turno B, un mecánico de mantención resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. Se registró una lesión menor sin incapacidad laboral, atendida en la posta de la faena.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "LEVE",
+    "faena": "El Teniente",
+    "turno": "turno B",
+    "ubicacion": "Sector Botadero Este",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0078",
+    "narrative_text": "Un ayudante de tronadura cayó desde una plataforma suspendida en Nivel 3200 de Chuquicamata, durante el turno B. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "caida_altura",
+    "severity": "FATAL",
+    "faena": "Chuquicamata",
+    "turno": "turno B",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0119",
+    "narrative_text": "Un operador de chancador sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Nivel 3200 de El Teniente, durante el turno de relevo. Los conductores no habían sido desenergizados previo al inicio de la tarea. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "electrocucion",
+    "severity": "GRAVE",
+    "faena": "El Teniente",
+    "turno": "turno de relevo",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0017",
+    "narrative_text": "En el pique de tránsito de Andina, la fortificación cedió durante el turno de relevo mientras un ayudante de tronadura realizaba mantención en Galería 12. La última revisión de fortificación registrada superaba el plazo de seis meses establecido para piques fortificados. Se produjo amputación parcial de una extremidad superior, con traslado inmediato en ambulancia.",
+    "incident_type": "colapso_fortificacion",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno de relevo",
+    "ubicacion": "Galería 12",
+    "relevant_articles": [
+      "157",
+      "158",
+      "159",
+      "160"
+    ]
+  },
+  {
+    "incident_id": "INC-0057",
+    "narrative_text": "Un mecánico de mantención reportó irritación respiratoria aguda luego de operar sin EPP respiratorio adecuado en Rajo Fase 4, Radomiro Tomic, durante el turno B, en un sector con alta concentración de polvo en suspensión. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "LEVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno B",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0084",
+    "narrative_text": "Un mecánico de mantención cayó desde una plataforma suspendida en Correa transportadora CV-14 de Los Bronces, durante el turno noche. El arnés utilizado no correspondía a un elemento de protección personal certificado según el procedimiento de trabajos en altura. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "caida_altura",
+    "severity": "FATAL",
+    "faena": "Los Bronces",
+    "turno": "turno noche",
+    "ubicacion": "Correa transportadora CV-14",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0007",
+    "narrative_text": "En Nivel 2850 de la faena Escondida, durante el turno noche, se produjo un derrumbe parcial de la caja de galería sobre un operador de perforadora. No se había realizado el chequeo de techo y cajas al inicio de la jornada según el procedimiento de acuñadura vigente. No hubo lesiones de consideración; el trabajador continuó su turno tras evaluación médica preventiva.",
+    "incident_type": "caida_rocas",
+    "severity": "LEVE",
+    "faena": "Escondida",
+    "turno": "turno noche",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "157",
+      "158",
+      "160",
+      "161",
+      "162"
+    ]
+  },
+  {
+    "incident_id": "INC-0121",
+    "narrative_text": "Durante labores de perforación en Nivel 2850 de Los Bronces, turno noche, un operador de CAEX resultó afectado por proyección de esquirlas de roca. El área no contaba con delimitación ni el trabajador usaba protección facial adecuada. Se registró una lesión menor sin incapacidad laboral, atendida en la posta de la faena.",
+    "incident_type": "proyeccion_particulas",
+    "severity": "LEVE",
+    "faena": "Los Bronces",
+    "turno": "turno noche",
+    "ubicacion": "Nivel 2850",
+    "relevant_articles": [
+      "174"
+    ]
+  },
+  {
+    "incident_id": "INC-0060",
+    "narrative_text": "Trabajadores del turno de relevo en Rampa de acceso al rajo de Escondida presentaron síntomas respiratorios tras una jornada de perforación sin riego de agua previo ni posterior a la tronadura. Los registros de muestreo periódico de aire no estaban actualizados. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "exposicion_polvo_silice",
+    "severity": "GRAVE",
+    "faena": "Escondida",
+    "turno": "turno de relevo",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "140"
+    ]
+  },
+  {
+    "incident_id": "INC-0028",
+    "narrative_text": "En Radomiro Tomic, durante el turno día, un vehículo liviano que transitaba por Polígono de tronadura B-12 sin pértiga reglamentaria fue impactado por un CAEX CAEX-282 de gran tonelaje que realizaba maniobras de retroceso en la zona de carguío. El operador del CAEX reportó visibilidad reducida por polvo en suspensión. Se registró una intoxicación masiva que afectó a varios trabajadores del sector.",
+    "incident_type": "atropello_caex",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno día",
+    "ubicacion": "Polígono de tronadura B-12",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0096",
+    "narrative_text": "En Rampa Norte de la mina subterránea Radomiro Tomic, durante el turno de relevo, un mecánico de mantención presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "GRAVE",
+    "faena": "Radomiro Tomic",
+    "turno": "turno de relevo",
+    "ubicacion": "Rampa Norte",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0098",
+    "narrative_text": "Se declaró un incendio en el sistema hidráulico del CAEX CAEX-458 en Rajo Fase 4, faena El Teniente, durante el turno día. El equipo contaba con extintor vencido y el operador no logró controlar el foco inicial. El hecho resultó en la muerte de un trabajador, activándose el protocolo de notificación inmediata a la Dirección Regional del Servicio.",
+    "incident_type": "incendio_equipo",
+    "severity": "FATAL",
+    "faena": "El Teniente",
+    "turno": "turno día",
+    "ubicacion": "Rajo Fase 4",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0144",
+    "narrative_text": "Un ayudante de tronadura sufrió quemaduras al manipular reactivos en Sala de Molienda de la planta Los Pelambres, durante el turno noche, sin el EPP químico especificado en la hoja de seguridad del insumo. El trabajador sufrió fractura de columna vertebral y fue trasladado de urgencia al centro asistencial más cercano.",
+    "incident_type": "quemadura_quimica",
+    "severity": "GRAVE",
+    "faena": "Los Pelambres",
+    "turno": "turno noche",
+    "ubicacion": "Sala de Molienda",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0095",
+    "narrative_text": "En Galería 12 de la mina subterránea El Teniente, durante el turno B, un supervisor de turno presentó síntomas de intoxicación tras ingresar a un sector con concentración de oxígeno bajo el mínimo reglamentario. El aforo de ventilación trimestral del sector estaba atrasado. Se registró una lesión menor sin incapacidad laboral, atendida en la posta de la faena.",
+    "incident_type": "intoxicacion_gases",
+    "severity": "LEVE",
+    "faena": "El Teniente",
+    "turno": "turno B",
+    "ubicacion": "Galería 12",
+    "relevant_articles": [
+      "137",
+      "138",
+      "139",
+      "144"
+    ]
+  },
+  {
+    "incident_id": "INC-0117",
+    "narrative_text": "Un mecánico de mantención sufrió contacto eléctrico al realizar labores de acuñadura cerca de conductores energizados en Nivel 3200 de Andina, durante el turno B. Los conductores no habían sido desenergizados previo al inicio de la tarea. El trabajador presentó quemaduras de consideración, con riesgo de invalidez parcial.",
+    "incident_type": "electrocucion",
+    "severity": "GRAVE",
+    "faena": "Andina",
+    "turno": "turno B",
+    "ubicacion": "Nivel 3200",
+    "relevant_articles": [
+      "163"
+    ]
+  },
+  {
+    "incident_id": "INC-0032",
+    "narrative_text": "En Radomiro Tomic, durante el turno noche, un vehículo liviano que transitaba por Banco 1780 sin pértiga reglamentaria fue impactado por un CAEX CAEX-349 de gran tonelaje que realizaba maniobras de retroceso en la zona de carguío. El operador del CAEX reportó visibilidad reducida por polvo en suspensión. Se confirmó el deceso del trabajador durante el traslado al centro asistencial.",
+    "incident_type": "atropello_caex",
+    "severity": "FATAL",
+    "faena": "Radomiro Tomic",
+    "turno": "turno noche",
+    "ubicacion": "Banco 1780",
+    "relevant_articles": [
+      "246",
+      "247"
+    ]
+  },
+  {
+    "incident_id": "INC-0138",
+    "narrative_text": "Un operador de perforadora sufrió quemaduras al manipular reactivos en Planta de Chancado Secundario de la planta Los Pelambres, durante el turno B, sin el EPP químico especificado en la hoja de seguridad del insumo. El trabajador perdió la visión de un ojo producto del incidente.",
+    "incident_type": "quemadura_quimica",
+    "severity": "GRAVE",
+    "faena": "Los Pelambres",
+    "turno": "turno B",
+    "ubicacion": "Planta de Chancado Secundario",
+    "relevant_articles": [
+      "77"
+    ]
+  },
+  {
+    "incident_id": "INC-0068",
+    "narrative_text": "Se registró una tronadura no programada en Rampa de acceso al rajo, faena Los Pelambres, durante el turno B, en condiciones de viento superior a cien kilómetros por hora que no fueron evaluadas antes de continuar el carguío de explosivos. El trabajador falleció en el lugar antes de la llegada de la brigada de rescate.",
+    "incident_type": "tronadura_prematura",
+    "severity": "FATAL",
+    "faena": "Los Pelambres",
+    "turno": "turno B",
+    "ubicacion": "Rampa de acceso al rajo",
+    "relevant_articles": [
+      "250",
+      "251",
+      "252",
+      "253"
+    ]
+  }
+]

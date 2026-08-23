@@ -1,0 +1,28 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Artefactos generados (reproducibles via los scripts de src/)
+data/chroma_db/
+data/models/
+
+# Variables de entorno / credenciales
+.env
+.env.*
+
+# Logs y temporales
+*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

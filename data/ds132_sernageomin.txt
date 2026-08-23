@@ -1,0 +1,301 @@
+REGLAMENTO DE SEGURIDAD MINERA — DECRETO SUPREMO N° 132
+Ministerio de Minería, Chile. Publicado en el Diario Oficial el 07 de febrero de 2004.
+
+=====================================================================
+NOTA IMPORTANTE SOBRE ESTE ARCHIVO (leer antes de usar el sistema RAG)
+=====================================================================
+Este archivo es un EXTRACTO curado del DS 132, no el reglamento completo
+(el texto oficial tiene 592 artículos en 146 páginas). Los articulos
+incluidos abajo son transcripcion literal, verificada contra el PDF
+oficial publicado por SERNAGEOMIN:
+  https://www.sernageomin.cl/gobiernotransparente/marconormativo/pdf/ReglamentodeSeguridadMinera.pdf
+y contra el registro de Ley Chile de la Biblioteca del Congreso Nacional:
+  https://www.bcn.cl/leychile/Navegar?idNorma=221064
+
+Se seleccionaron los articulos relevantes para los tipos de incidentes
+que este proyecto usa como demo (reporte de accidentes, EPP, tronadura,
+fortificacion/acunadura, transito de equipos de gran tonelaje, ventilacion
+y sanciones). NO es un sustituto del texto completo del reglamento para
+efectos de cumplimiento normativo real: cualquier uso operativo/legal
+debe consultar el DS 132 completo y vigente (y sus actualizaciones
+posteriores) directamente en las fuentes oficiales de arriba.
+
+=====================================================================
+TÍTULO I — DISPOSICIONES GENERALES
+CAPÍTULO TERCERO — Investigación y Denuncia de Accidentes
+=====================================================================
+
+Artículo 76
+Es obligación de la Empresa Minera investigar todos los accidentes con
+lesiones o muerte a los trabajadores, analizar sus causas e implementar
+las acciones correctivas para evitar su repetición, sin perjuicio de lo
+establecido en la letra b) del artículo 13 del presente reglamento.
+
+Artículo 77
+Se informarán inmediatamente a la correspondiente Dirección Regional del
+Servicio los accidentes que hayan causado la muerte de uno o más
+trabajadores o alguna de las siguientes lesiones:
+a) Fractura de cabeza, columna vertebral y caderas.
+b) Amputación de mano, pie o parte importante de estas extremidades.
+c) Ceguera, mudez o sordera total.
+d) Quemaduras susceptibles de ocasionar invalidez parcial o total.
+e) Intoxicaciones masivas.
+f) Toda lesión grave con el potencial de generar invalidez total y
+   permanente.
+g) Los hechos que, aún cuando no hubieren ocasionado lesiones a los
+   trabajadores, revistan un alto potencial de daños personales o
+   materiales, tales como: incendios, explosión, derrumbes, estallidos
+   masivos de rocas, colapso de acopios, emergencias ambientales y otras
+   emergencias que hayan requerido la evacuación parcial o total de la
+   mina u otras instalaciones.
+
+Cada uno de los accidentes aludidos precedentemente, como también
+aquellos que hayan ocasionado la muerte a uno o más trabajadores, deberá
+ser objeto de un informe técnico, suscrito por el ingeniero o jefe a
+cargo de la faena y por un Experto, en el cual se indicarán clara y
+explícitamente las causas, consecuencias y medidas correctivas del
+accidente. Este informe deberá ser enviado a la correspondiente
+Dirección Regional del Servicio donde se encuentre ubicada la faena,
+dentro del plazo de quince (15) días, contado desde el día del
+accidente. Este plazo podrá ser ampliado a petición del interesado y muy
+especialmente, si para su correcta conclusión, se necesiten mayores
+estudios.
+
+=====================================================================
+TÍTULO II — DE LAS FAENAS MINERAS
+CAPÍTULO SEXTO — Emergencias, Rescate y Primeros Auxilios
+=====================================================================
+
+Artículo 73
+En toda Empresa minera deberá disponerse de trabajadores instruidos en
+primeros auxilios, cuyo número será determinado por la Administración de
+acuerdo con la extensión de las faenas y el número de trabajadores, de
+modo que se garantice, en caso de accidente, una atención eficiente y
+oportuna de los lesionados.
+
+Artículo 74
+Dentro de un radio de cinco kilómetros (5 Km) de la faena, se debe
+contar con uno o más vehículos motorizados que puedan ser rápidamente
+equipados y adaptados para llevar, como mínimo, dos personas en camillas
+y dos personas con conocimientos de primeros auxilios al mismo tiempo.
+Las faenas mineras que se desarrollen a más de cincuenta kilómetros
+(50 Km) de un centro médico hospitalario deberán disponer de personal
+paramédico y de una o más ambulancias equipadas, disponibles en la
+faena las veinticuatro (24) horas del día.
+
+Artículo 75
+En las faenas mineras, se deberán establecer procedimientos de
+emergencia y rescate que a lo menos comprendan alarmas, evacuación,
+salvamento con medios propios o ajenos, medios de comunicación y
+elementos necesarios para enfrentar dichas emergencias. En las minas
+subterráneas se deberá organizar y mantener Brigadas de Rescate Minero,
+cuyos componentes deben ser seleccionados, instruidos y perfectamente
+dotados de los equipos necesarios que les permitan desarrollar las
+operaciones de rescate y Primeros Auxilios.
+
+=====================================================================
+TÍTULO III — REGLAMENTOS INTERNOS OBLIGATORIOS
+CAPÍTULO PRIMERO — Generalidades
+=====================================================================
+
+Artículo 78
+La Empresa Minera deberá elaborar reglamentos específicos de a lo menos,
+las siguientes actividades:
+a) Control de ingreso de personas a las faenas.
+b) Transporte, uso y manejo de Explosivos.
+c) Tránsito y Operación de Equipos en interior de mina.
+d) Fortificación.
+e) Emergencias.
+f) Transporte, Manipulación, Almacenamiento y Uso de Sustancias y
+   Elementos Peligrosos.
+g) Operación del método de explotación, reconocimientos y desarrollos.
+h) Otros de acuerdo a las necesidades operacionales.
+
+=====================================================================
+FORTIFICACIÓN Y ACUÑADURA (labores subterráneas)
+CAPÍTULO SEXTO — Fortificación
+=====================================================================
+
+Artículo 157
+Los trabajos subterráneos deben ser provistos, sin retardo, del
+sostenimiento más adecuado a la naturaleza del terreno y solamente
+podrán quedar sin fortificación los sectores en los cuales las
+mediciones, los ensayos, su análisis y la experiencia en sectores de
+comportamiento conocido, hayan demostrado su condición de autosoporte
+consecuente con la presencia de presiones que se mantienen por debajo de
+los límites críticos que la roca natural es capaz de soportar.
+
+Artículo 158
+Toda galería que no esté fortificada, debe ser inspeccionada
+periódicamente a objeto de evaluar sus condiciones de estabilidad y
+requerimientos de "acuñadura", debiendo realizarse de inmediato las
+medidas correctivas ante cualquier anormalidad detectada. En aquellas
+galerías fortificadas, deberá inspeccionarse el estado de la
+fortificación con el fin de tomar las medidas adecuadas cuando se
+encuentren anomalías en dicha fortificación.
+
+Artículo 160
+En los piques para tránsito de personal y materiales que no estén
+protegidos o fortificados, se deberá disponer la acuñadura permanente a
+través de personal instruido y preparado para tales fines.
+
+Artículo 161
+Se prohíbe trabajar o acceder a cualquier lugar de la mina que no esté
+debidamente fortificada, sin previamente acuñar.
+
+Artículo 162
+La operación de acuñadura tendrá carácter permanente en toda mina y cada
+vez que se ingrese a una galería o cámara de producción, después de una
+tronada, además de la ventilación, se deberá chequear minuciosamente el
+estado de la fortificación y acuñadura. La Administración deberá
+elaborar el procedimiento respectivo, el que consigne a lo menos:
+a) Obligatoriedad que tiene toda persona al ingresar al lugar de
+   trabajo, de controlar "techo y cajas de galerías y frentes de
+   trabajo", al inicio y durante cada jornada laboral y proceder,
+   siempre y cuando esté capacitado para ello, a la inmediata acuñadura
+   cuando se precise o en su defecto informar a la supervisión ante
+   problemas mayores.
+b) Obligatoriedad de la Administración de proporcionar los medios y
+   recursos para ejecutar la tarea. Ello incluye "Acuñadores" apropiados,
+   andamios, plataformas o equipos mecanizados si las condiciones y
+   requerimientos lo hacen necesario.
+c) Capacitación sobre técnicas y uso de implementos para llevar a efecto
+   esta tarea.
+
+Artículo 163
+Si se requiere acuñar un sector donde existan conductores eléctricos
+protegidos o desnudos, la acuñadura deberá hacerse hasta una distancia
+prudente en que se garantice que no ocurrirá contacto eléctrico, tanto
+con la barretilla acuñadora como con otros elementos que se usen. Si es
+necesario se deberá desenergizar los conductores.
+
+Artículo 174
+Todo trabajo que sea necesario realizar desde una jaula o plataforma
+suspendida debe ejecutarse de acuerdo a un procedimiento que para tal
+efecto ordenará confeccionar la Administración. Los elementos de
+protección personal (EPP) que se utilicen, como cuerdas, arneses,
+cinturones y otros, deben corresponder a elementos aprobados y
+certificados para tal efecto.
+
+=====================================================================
+VENTILACIÓN (minas subterráneas)
+CAPÍTULO CUARTO — Ventilación
+=====================================================================
+
+Artículo 137
+En toda mina subterránea se deberá disponer de circuitos de ventilación,
+ya sea natural o forzado a objeto de mantener un suministro permanente
+de aire fresco y retorno del aire viciado.
+
+Artículo 138
+En todos los lugares de la mina, donde acceda personal, el ambiente
+deberá ventilarse por medio de una corriente de aire fresco, de no menos
+de tres metros cúbicos por minuto (3 m3/min) por persona, en cualquier
+sitio del interior de la mina. Las velocidades, como promedio, no podrán
+ser mayores de ciento cincuenta metros por minuto (150 m/min), ni
+inferiores a quince metros por minuto (15 m/min).
+
+Artículo 139
+Se deberá hacer, a lo menos trimestralmente, un aforo de ventilación en
+las entradas y salidas principales de la mina y, semestralmente, un
+control general de toda la mina, no tolerándose pérdidas superiores al
+quince por ciento (15%).
+
+Artículo 141
+En las galerías en desarrollo donde se use ventilación auxiliar, el
+extremo de la tubería no deberá estar a más de treinta metros (30m) de
+la frente. Para distancias mayores se deberá usar sopladores, venturi o
+ventiladores adicionales.
+
+Artículo 144
+No se permitirá la ejecución de trabajos en el interior de las minas
+subterráneas cuya concentración de oxígeno en el aire, en cuanto a peso,
+sea inferior a diecinueve coma cinco por ciento (19,5%) y concentraciones
+de gases nocivos superiores a los valores máximos permisibles
+determinados por la legislación. Si las concentraciones ambientales
+fueren superiores, será obligatorio retirar al trabajador del área
+contaminada hasta que las condiciones ambientales retornen a la
+normalidad.
+
+=====================================================================
+TRÁNSITO DE EQUIPOS DE GRAN TONELAJE (minas a rajo abierto — relevante
+para incidentes con CAEX / camiones de extracción)
+=====================================================================
+
+Artículo 246
+Toda persona que por estrictas razones de trabajo deba ingresar,
+transitar o permanecer en las áreas de operación del "rajo", debe
+hacerlo premunido de elementos distintivos de alta visibilidad que
+denote su presencia a los operadores de equipos.
+
+Artículo 247
+Todo vehículo menor, como camionetas, furgones, camiones tres cuartos
+(3/4) y vehículos con tracción en las cuatro ruedas, que transiten por
+las áreas en que circulan y trabajan equipos de gran tonelaje (CAEX),
+deben hacerlo portando una pértiga, balizas u otros, que denoten su
+presencia frente a tales equipos. La pértiga tendrá una altura mínima de
+tres metros (3m) medidos desde el suelo, con una luz intermitente en su
+extremo superior. El uso de estos implementos será obligatorio dentro de
+los límites de la faena.
+
+=====================================================================
+PERFORACIÓN, TRONADURA Y EXPLOSIVOS (minas a rajo abierto)
+CAPÍTULO SEGUNDO — Perforación y Tronadura
+=====================================================================
+
+Artículo 250
+El tapado de los hoyos cargados con explosivos (colocación de taco),
+deberá hacerse en forma manual o con un equipo especialmente diseñado
+para ello, autorizado por el Servicio, indicando medidas tendientes a
+asegurar que la guía o cordón del detonador que sale del hoyo no pueda
+ser golpeado por el equipo u otro tipo de accidente que ponga en riesgo
+al personal que realiza la labor.
+
+Artículo 251
+El equipo mecanizado no podrá trabajar dando la espalda al borde del
+banco y a una distancia menor de veinte metros (20m) de los equipos de
+carguío como camión fábrica o zona donde se realiza el carguío de
+explosivos de pozos.
+
+Artículo 252
+En presencia o ante la proximidad de tormentas eléctricas, nevazones,
+ventiscas y vientos sobre cien kilómetros (100km) por hora, se deberá
+suspender la operación de carguío de explosivos y cualquier manejo de
+ellos. Cuando una parte de la tronadura se encuentre cargada, se deberá
+aislar el área tal como si se tratara de la iniciación de un disparo
+programado y esperar hasta que la emergencia haya pasado.
+
+Artículo 253
+La tronadura sólo se podrá realizar con luz natural. El carguío y
+transporte podrá hacerse con luz artificial, con una adecuada
+iluminación de depósitos y botaderos.
+
+=====================================================================
+TÍTULO XII — SANCIONES
+=====================================================================
+
+Artículo 590
+Las contravenciones a las disposiciones del presente Reglamento y a las
+Resoluciones que para su cumplimiento se dicten, en que incurran las
+Empresas mineras, y sin perjuicio de las medidas correctivas que se
+establezcan, podrán ser sancionadas con multas de veinte (20) a
+cincuenta (50) Unidades Tributarias Mensuales por cada infracción. En
+caso de reincidencia, las infracciones serán sancionadas con el doble de
+dichas multas. El Servicio mediante Resolución establecerá las diversas
+categorías de contravenciones a las disposiciones del presente
+Reglamento, señalándose en cada caso la multa que corresponda aplicar.
+
+Artículo 591
+Las penas de multas aludidas en el artículo anterior se impondrán en
+Resolución del Director Nacional del Servicio, previa solicitud del
+Subdirector Nacional de Minería, para los efectos de su aplicación
+administrativa.
+
+Artículo 592
+En caso de reincidencias, se podrá determinar el cierre temporal o
+indefinido, ya sea total o parcial de la faena minera respectiva.
+Asimismo, en los casos en que a juicio del Servicio, atendida la
+naturaleza de la infracción y los perjuicios que se hayan ocasionado o
+se puedan causar, se trate de infracciones graves de las empresas, se
+podrá también disponer el cierre temporal o indefinido, parcial o total
+de la faena minera respectiva.
