@@ -12,7 +12,14 @@ Diseño:
    (BM25 por palabras clave) -- captura tanto similitud semántica como
    coincidencias léxicas exactas (números de artículo, términos técnicos
    como "acuñadura" o "pértiga" que un embedding puede diluir).
-3. Backend de síntesis intercambiable: Ollama (local) -> OpenAI (API) ->
+3. Re-ranking con Cross-Encoder (`reranker.py`, segunda etapa, opcional pero
+   activada por defecto): el retriever híbrido trae un conjunto amplio de
+   candidatos (`candidate_k`, por defecto 10) optimizado para recall; el
+   Cross-Encoder los re-ordena evaluando pregunta y pasaje juntos en una sola
+   pasada por el modelo (más preciso que comparar embeddings por separado),
+   y solo entonces se trunca a los `k` finales que ve el LLM. Ver §7 del
+   README para la mejora medida en MRR/NDCG.
+4. Backend de síntesis intercambiable: Ollama (local) -> OpenAI (API) ->
    modo extractivo (sin LLM, siempre disponible) como fallback. El
    fallback extractivo hace que el pipeline sea 100% funcional y testeable
    sin depender de un LLM externo.
@@ -31,6 +38,8 @@ from langchain_community.retrievers import BM25Retriever
 from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 
+from src.rag.reranker import CrossEncoderReranker
+
 ROOT_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT_DIR / "data"
 CHROMA_PERSIST_DIR = ROOT_DIR / "data" / "chroma_db"
@@ -39,6 +48,7 @@ REGULATION_PATH = DATA_DIR / "ds132_sernageomin.txt"
 EMBEDDING_MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
 COLLECTION_NAME = "ds132_articles"
 DEFAULT_K = 4
+DEFAULT_CANDIDATE_K = 10
 
 ARTICLE_HEADER_RE = re.compile(r"^Artículo (\d+)$")
 SECTION_DELIMITER_RE = re.compile(r"^=+$")
@@ -235,6 +245,8 @@ class RAGPipeline:
         persist_dir: Path = CHROMA_PERSIST_DIR,
         llm_preference: str = "auto",
         k: int = DEFAULT_K,
+        use_reranker: bool = True,
+        candidate_k: int = DEFAULT_CANDIDATE_K,
     ) -> None:
         text = load_regulation_text(regulation_path)
         chunks = chunk_regulation(text)
@@ -242,11 +254,22 @@ class RAGPipeline:
             raise ValueError("No se extrajo ningún artículo del texto normativo. Revisa el formato del archivo.")
 
         self.documents = build_documents(chunks)
-        self.retriever = build_hybrid_retriever(self.documents, persist_dir=persist_dir, k=k)
+        self.k = k
+        self.use_reranker = use_reranker
+        # Si el re-ranker está activo, la primera etapa trae un pool más
+        # amplio de candidatos (`candidate_k`) del que el Cross-Encoder
+        # elige los `k` finales; si no, el retriever híbrido ya entrega
+        # directamente los `k` finales, como antes de agregar el re-ranker.
+        first_stage_k = candidate_k if use_reranker else k
+        self.retriever = build_hybrid_retriever(self.documents, persist_dir=persist_dir, k=first_stage_k)
+        self.reranker = CrossEncoderReranker() if use_reranker else None
         self.backend_name, self._answer_fn = get_llm_backend(llm_preference)
 
     def retrieve(self, question: str) -> list[Document]:
-        return self.retriever.invoke(question)
+        candidates = self.retriever.invoke(question)
+        if self.reranker is None:
+            return candidates
+        return self.reranker.rerank(question, candidates, top_k=self.k)
 
     def query(self, question: str) -> dict:
         docs = self.retrieve(question)

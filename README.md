@@ -9,9 +9,11 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
 [![LangChain](https://img.shields.io/badge/LangChain-1.x-1C3C3C)](https://python.langchain.com/)
 [![ChromaDB](https://img.shields.io/badge/vector%20store-ChromaDB-orange)](https://www.trychroma.com/)
+[![Cross-Encoder](https://img.shields.io/badge/re--ranking-Cross--Encoder-6A5ACD)](https://www.sbert.net/docs/pretrained-models/ce-msmarco.html)
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)](https://streamlit.io/)
-[![Tests](https://img.shields.io/badge/tests-14%20passing-brightgreen)](tests/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-2%20notebooks-F37626)](02_Reranker_CrossEncoder_Evaluation.ipynb)
+[![Tests](https://img.shields.io/badge/tests-34%20passing-brightgreen)](tests/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 </div>
@@ -57,8 +59,12 @@ This project automates both: a text classifier trained on incident narratives pr
     │            dense retriever                            sparse retriever│
     │      (HuggingFace embeddings + Chroma)                 (BM25 keyword) │
     │                     └────────────────────┬────────────────────┘       │
-    │                                  EnsembleRetriever (hybrid)            │
-    │                                          │                             │
+    │                          EnsembleRetriever (hybrid, stage 1: recall)   │
+    │                                          │  ~10 candidates              │
+    │                                          ▼                             │
+    │                 Cross-Encoder re-ranker (stage 2: precision)           │
+    │            cross-encoder/ms-marco-MiniLM-L-6-v2, src/rag/reranker.py   │
+    │                                          │  top-k final                │
     │                     Ollama → OpenAI → extractive fallback              │
     │                              (pluggable synthesis backend)             │
     │                                          │                             │
@@ -75,6 +81,7 @@ This project automates both: a text classifier trained on incident narratives pr
 
 - **Structure-aware chunking**: the regulation is split by its own `Artículo N` headers instead of naive character-count splitting, so a chunk is never a half-sentence from two different articles — critical for a legal domain where citation precision matters.
 - **Hybrid retrieval**: a dense retriever (semantic similarity via multilingual embeddings) is combined with a sparse BM25 retriever (exact keyword matches) via `EnsembleRetriever`. Dense retrieval alone can miss exact article numbers or narrow technical terms (*"acuñadura"*, *"pértiga"*) that BM25 catches reliably.
+- **Two-stage retrieval: hybrid recall + Cross-Encoder precision**: the hybrid retriever is tuned for recall — bring back a wide-enough candidate pool (10 by default) fast, over the whole collection. A Cross-Encoder (`cross-encoder/ms-marco-MiniLM-L-6-v2`) then re-scores those candidates by evaluating the question and each passage *together* in one forward pass (strictly more accurate than comparing two independently-computed embeddings, but too expensive to run over the full collection) — only the top-k after re-ranking reach the LLM. §7 has the measured MRR/NDCG improvement this gave, and `02_Reranker_CrossEncoder_Evaluation.ipynb` has the full comparison.
 - **Pluggable, always-functional LLM backend**: the pipeline tries Ollama (local model) first, then OpenAI (if `OPENAI_API_KEY` is set), and falls back to an **extractive** mode (no LLM at all — just the ranked, cited article excerpts) if neither is available. This means the system is 100% testable and demoable with zero external dependencies or API keys.
 
 ## 3. Tech stack
@@ -86,10 +93,12 @@ This project automates both: a text classifier trained on incident narratives pr
 | Vector store | ChromaDB (local, persisted to disk) |
 | Embeddings | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` (Spanish-capable) |
 | Sparse retrieval | BM25 (`rank-bm25`) |
+| Re-ranking | Cross-Encoder `cross-encoder/ms-marco-MiniLM-L-6-v2` (`sentence-transformers`) |
 | Classifier | Logistic Regression (scikit-learn) on sentence embeddings |
 | LLM synthesis | Ollama (local) → OpenAI API → extractive fallback |
 | API | FastAPI + Uvicorn |
 | UI | Streamlit |
+| Evaluation | MRR, NDCG@k, Context Relevance@k, Citation Faithfulness (`src/rag/evaluation.py`) |
 | Tests | pytest |
 
 ## 4. Project structure
@@ -106,14 +115,19 @@ rag-seguridad-minera-chile/
 │   │   ├── dataset_generator.py    # Synthetic incident dataset generator
 │   │   └── severity_classifier.py  # Embedding + LogisticRegression classifier
 │   ├── rag/
-│   │   └── pipeline.py             # Chunking, hybrid retriever, LLM backends
+│   │   ├── pipeline.py             # Chunking, hybrid retriever, LLM backends
+│   │   ├── reranker.py             # Cross-Encoder re-ranking (stage 2)
+│   │   └── evaluation.py           # 27-query eval set + MRR/NDCG/faithfulness metrics
 │   ├── api/
 │   │   └── main.py                 # FastAPI: /classify-incident, /rag-query
 │   └── app/
 │       └── streamlit_app.py        # Interactive dashboard
+├── 02_Reranker_CrossEncoder_Evaluation.ipynb   # executed, real outputs
 ├── tests/
 │   ├── test_dataset_generator.py
 │   ├── test_rag_pipeline.py
+│   ├── test_reranker.py
+│   ├── test_evaluation.py
 │   └── test_severity_classifier.py
 ├── requirements.txt
 ├── pytest.ini
@@ -178,6 +192,15 @@ streamlit run src/app/streamlit_app.py
 ```
 Three tabs: classify an incident (auto-chains into a RAG query for applicable protocols), free-form regulatory Q&A, and a dataset overview.
 
+**6. Run the re-ranker evaluation notebook**
+
+```powershell
+jupyter nbconvert --to notebook --execute --inplace 02_Reranker_CrossEncoder_Evaluation.ipynb
+# or open it interactively:
+jupyter notebook 02_Reranker_CrossEncoder_Evaluation.ipynb
+```
+Compares MRR/NDCG/Context Relevance before vs. after Cross-Encoder re-ranking on the 27-query DS132 evaluation set, plus Citation Faithfulness on the generated answers.
+
 **Optional: use a real LLM instead of the extractive fallback**
 
 ```powershell
@@ -201,8 +224,17 @@ All numbers below were produced by actually running the scripts in this repo (no
 | Severity classifier — F1-macro | **0.719** |
 | Train / test split | 108 / 36 (75/25, stratified by generation) |
 | DS 132 articles indexed by the RAG pipeline | 27 (curated excerpt — see disclaimer below) |
-| Retrieval mechanism | Hybrid (dense + BM25), verified to correctly retrieve article 247 for a "pértiga" question and articles 157–162 for a "fortificación/acuñadura" question |
-| Test suite | 14/14 passing (`pytest`) |
+| Retrieval mechanism | Hybrid (dense + BM25) + Cross-Encoder re-ranking, verified to correctly retrieve article 247 for a "pértiga" question and articles 157–162 for a "fortificación/acuñadura" question |
+| Evaluation set | 27 queries, one per indexed article (`src/rag/evaluation.py`) |
+| MRR — before / after re-ranking | 0.920 → **0.981** |
+| NDCG@4 — before / after re-ranking | 0.940 → **0.986** |
+| Context Relevance@4 — before / after re-ranking | 0.250 → 0.250 (unchanged — see note below) |
+| Citation Faithfulness (extractive backend) | 0.985 (2/27 queries at 0.8 — see note below) |
+| Test suite | 34/34 passing (`pytest`) |
+
+**Honest note on Context Relevance@4 staying flat**: almost every query in the evaluation set has exactly one truly relevant article, and that article was already inside the hybrid retriever's top-4 *before* re-ranking — so precision@4 is capped at 1/4 = 0.250 in both conditions by construction of the dataset, not because re-ranking did nothing. What re-ranking changed is *where* that relevant article lands within the top-4, which is exactly what MRR and NDCG measure, and both improved.
+
+**Honest note on Citation Faithfulness not being exactly 1.0**: 2 of the 27 extractive-mode answers score 0.8, not 1.0, even though the extractive backend only ever quotes articles it actually retrieved. The cause (verified directly): Article 76's own text contains an internal cross-reference — *"...sin perjuicio de lo establecido en la letra b) del artículo 13 del presente reglamento"* — to an article outside the curated excerpt that was never retrieved. The regex-based faithfulness metric can't distinguish that legitimate in-text cross-reference from an actual citation the pipeline is making. Both affected queries retrieve Article 76, so it's one root cause, not two independent failures — documented here rather than tuned away or hidden.
 
 ## 8. Regulatory disclaimer
 
@@ -218,12 +250,12 @@ The RAG system prompt explicitly instructs the LLM to answer only from retrieved
 ```powershell
 pytest -v
 ```
-14 tests across dataset generation invariants, regulation chunking (no duplicate articles, known-article content), hybrid retrieval relevance for two independent topics, and classifier output validity (label set, metric ranges, probability normalization).
+34 tests across dataset generation invariants, regulation chunking (no duplicate articles, known-article content), hybrid retrieval relevance for two independent topics, classifier output validity (label set, metric ranges, probability normalization), Cross-Encoder re-ranking behavior (empty input, correct reordering on an unambiguous case, top-k truncation after re-ordering, descending scores), and the evaluation module (MRR/NDCG/Context Relevance/Citation Faithfulness against hand-computed values, plus a check that the 27-query eval set's ground-truth articles actually exist in the regulation and cover all 27 indexed articles).
 
 ## 10. Possible extensions
 
-- Swap the curated DS132 excerpt for the full 592-article text (chunking logic already supports it — no code change needed).
-- Add cross-encoder re-ranking on top of the hybrid retriever for higher precision on ambiguous queries.
+- Swap the curated DS132 excerpt for the full 592-article text (chunking logic already supports it — no code change needed); re-run the evaluation notebook against the larger candidate pool a full-text index would need.
+- Replace the regex-based Citation Faithfulness proxy with an LLM-judge-based one (RAGAS-style) once a real LLM backend (Ollama/OpenAI) is consistently available, to move past the in-text-cross-reference limitation documented in §7.
 - Multiclass SHAP explanations for the severity classifier (see [chile-mining-predictive-maintenance](https://github.com/Rxyxs/chile-mining-predictive-maintenance) for a worked example of this pattern in a sibling project).
 - Persist incident classifications + RAG answers to a database for audit trail.
 
