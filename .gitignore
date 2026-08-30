@@ -29,7 +29,3 @@ Thumbs.db
 
 # Jupyter
 .ipynb_checkpoints/
-
-# Configuracion interna de asistentes de IA
-CLAUDE.md
-.claude/
