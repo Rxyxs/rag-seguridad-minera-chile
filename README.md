@@ -31,7 +31,34 @@ This project automates both: a text classifier trained on incident narratives pr
 
 > ⚠️ **Not a substitute for legal/compliance review.** See [§8 Regulatory disclaimer](#8-regulatory-disclaimer).
 
+## 1.1 Business Impact & Key Performance Indicators
+
+| Metric | Result | What it means |
+|---|---|---|
+| Severity classifier accuracy / F1-macro | 0.750 / 0.719 | Triages LEVE/GRAVE/FATAL incident narratives automatically |
+| Retrieval quality, MRR before/after re-ranking | 0.920 → **0.981** | Cross-Encoder re-ranking pushes the truly relevant article higher in the results, not just present somewhere in top-4 |
+| Retrieval quality, NDCG@4 before/after re-ranking | 0.940 → **0.986** | Rank-quality improvement, measured against a 27-query hand-labeled eval set |
+| Citation Faithfulness (extractive mode) | 0.985 | Purpose-built metric avoiding an LLM-judge, since the whole pipeline works 100% without an external LLM |
+| Verified retrieval examples | Article 247 for "pértiga", articles 157-162 for "fortificación/acuñadura" | Concrete, checkable retrieval correctness, not just aggregate metrics |
+| Test suite | 34/34 passing | Includes eval-set-integrity checks (every ground-truth article covered by at least one query) |
+
 ## 2. Architecture
+
+```mermaid
+flowchart TD
+    A[raw_incidents.json<br/>144 synthetic narratives] --> B["severity_classifier.py<br/>Logistic Regression"]
+    B --> API1[FastAPI /classify-incident]
+    D[ds132_sernageomin.txt<br/>curated DS132 excerpt] --> E["chunk by Articulo N"]
+    E --> F1[Dense retriever<br/>HF embeddings + Chroma]
+    E --> F2[Sparse retriever<br/>BM25]
+    F1 --> G[EnsembleRetriever<br/>hybrid recall, ~10 candidates]
+    F2 --> G
+    G --> H["Cross-Encoder re-ranker<br/>ms-marco-MiniLM-L-6-v2"]
+    H --> I[Ollama -> OpenAI -> extractive fallback]
+    I --> API2[FastAPI /rag-query]
+    API1 --> UI[Streamlit dashboard]
+    API2 --> UI
+```
 
 ```
                          ┌───────────────────────────┐

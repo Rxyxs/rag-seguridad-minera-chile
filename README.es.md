@@ -31,7 +31,34 @@ Este proyecto automatiza ambas tareas: un clasificador de texto entrenado sobre 
 
 > ⚠️ **No reemplaza la revisión legal/normativa.** Ver [§8 Disclaimer normativo](#8-disclaimer-normativo).
 
+## 1.1 Impacto de Negocio e Indicadores Clave (KPIs)
+
+| Métrica | Resultado | Qué significa |
+|---|---|---|
+| Accuracy / F1-macro del clasificador de severidad | 0,750 / 0,719 | Triage automático de narrativas LEVE/GRAVE/FATAL |
+| Calidad de recuperación, MRR antes/después del re-ranking | 0,920 → **0,981** | El re-ranking Cross-Encoder empuja al artículo realmente relevante más arriba en los resultados, no solo presente en algún lugar del top-4 |
+| Calidad de recuperación, NDCG@4 antes/después del re-ranking | 0,940 → **0,986** | Mejora de calidad de ranking, medida contra un set de evaluación de 27 consultas etiquetadas a mano |
+| Citation Faithfulness (modo extractivo) | 0,985 | Métrica construida a medida evitando un LLM-juez, ya que todo el pipeline funciona 100% sin un LLM externo |
+| Ejemplos de recuperación verificados | Artículo 247 para "pértiga", artículos 157-162 para "fortificación/acuñadura" | Correctitud de recuperación concreta y verificable, no solo métricas agregadas |
+| Suite de tests | 34/34 pasando | Incluye chequeos de integridad del eval set (cada artículo real cubierto por al menos una consulta) |
+
 ## 2. Arquitectura
+
+```mermaid
+flowchart TD
+    A[raw_incidents.json<br/>144 narrativas sinteticas] --> B["severity_classifier.py<br/>Logistic Regression"]
+    B --> API1[FastAPI /classify-incident]
+    D[ds132_sernageomin.txt<br/>extracto curado DS132] --> E["chunking por Articulo N"]
+    E --> F1[Retriever denso<br/>embeddings HF + Chroma]
+    E --> F2[Retriever disperso<br/>BM25]
+    F1 --> G[EnsembleRetriever<br/>recall hibrido, ~10 candidatos]
+    F2 --> G
+    G --> H["Re-ranker Cross-Encoder<br/>ms-marco-MiniLM-L-6-v2"]
+    H --> I[Ollama -> OpenAI -> fallback extractivo]
+    I --> API2[FastAPI /rag-query]
+    API1 --> UI[Dashboard Streamlit]
+    API2 --> UI
+```
 
 ```
                          ┌───────────────────────────┐
