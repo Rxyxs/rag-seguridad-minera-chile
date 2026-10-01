@@ -35,7 +35,7 @@ Este proyecto automatiza ambas tareas: un clasificador de texto entrenado sobre 
 
 | Métrica | Resultado | Qué significa |
 |---|---|---|
-| Accuracy / F1-macro del clasificador de severidad | 0,750 / 0,719 | Triage automático de narrativas LEVE/GRAVE/FATAL |
+| Accuracy / F1-macro del clasificador de severidad | 0,750 / 0,719 (por clase 0,556 / 0,875 / 0,727 — ver §7) | Triage automático de narrativas LEVE/GRAVE/FATAL |
 | Calidad de recuperación, MRR antes/después del re-ranking | 0,920 → **0,981** | El re-ranking Cross-Encoder empuja al artículo realmente relevante más arriba en los resultados, no solo presente en algún lugar del top-4 |
 | Calidad de recuperación, NDCG@4 antes/después del re-ranking | 0,940 → **0,986** | Mejora de calidad de ranking, medida contra un set de evaluación de 27 consultas etiquetadas a mano |
 | Citation Faithfulness (modo extractivo) | 0,985 | Métrica construida a medida evitando un LLM-juez, ya que todo el pipeline funciona 100% sin un LLM externo |
@@ -145,6 +145,7 @@ rag-seguridad-minera-chile/
 │   │   ├── pipeline.py             # Chunking, retriever híbrido, backends LLM
 │   │   ├── reranker.py             # Re-ranking Cross-Encoder (etapa 2)
 │   │   └── evaluation.py           # Set de eval de 27 consultas + métricas MRR/NDCG/faithfulness
+│   ├── make_figures.py             # Gráficos del README, desde el mismo pipeline y set de eval
 │   ├── api/
 │   │   └── main.py                 # FastAPI: /classify-incident, /rag-query
 │   └── app/
@@ -259,7 +260,27 @@ Todos los números a continuación fueron producidos ejecutando realmente los sc
 | Citation Faithfulness (backend extractivo) | 0,985 (2/27 consultas en 0,8 — ver nota abajo) |
 | Suite de tests | 34/34 pasando (`pytest`) |
 
+![Qué cambia el re-ranking con Cross-Encoder](outputs/figures/reranking_rank_shift.png)
+
 **Nota honesta sobre que Context Relevance@4 no cambie**: casi todas las consultas del set de evaluación tienen exactamente un artículo verdaderamente relevante, y ese artículo ya estaba dentro del top-4 del retriever híbrido *antes* de re-rankear — así que precision@4 está topada en 1/4 = 0,250 en ambas condiciones por construcción del dataset, no porque el re-ranking no haya hecho nada. Lo que el re-ranking cambió es *dónde* dentro del top-4 queda ese artículo relevante, que es exactamente lo que miden MRR y NDCG, y ambas mejoraron.
+
+El panel izquierdo es esa nota hecha concreta, y es la forma más clara de leer la ganancia de MRR. Antes del re-ranking, 23 de 27 consultas ya ponían el artículo correcto en el rango 1, 3 lo ponían en el rango 2 y 1 en el rango 3. Después, **26 de 27 quedan en el rango 1** y la restante en el rango 2. Nada salió del top-4 en ninguna de las dos condiciones — que es exactamente por qué precision@4 no podía moverse — y ninguna consulta *empeoró*. Un salto de 0,920 a 0,981 de MRR suena marginal; "tres consultas más ahora responden desde el primer resultado en vez del segundo o tercero" es el mismo hecho en una forma sobre la que un revisor puede actuar.
+
+![Clasificador de severidad: matriz de confusión y métricas por clase](outputs/figures/severity_classifier.png)
+
+**Nota honesta sobre el clasificador: la accuracy titular esconde dos cosas que vale declarar.**
+
+La primera es la dispersión. El F1-macro es 0,719, pero por clase va 0,556 (LEVE), 0,875 (GRAVE), 0,727 (FATAL). El promedio macro es la media de tres números bastante distintos, y LEVE — la clase más chica, 33 de 144 — es la que el modelo maneja peor.
+
+La segunda importa más para el caso de uso. La severidad es una etiqueta *ordenada*, así que los dos tipos de error no son intercambiables. Sobre los 36 incidentes de prueba, **5 quedan sub-triados** (predichos más leves de lo que son) contra 4 sobre-triados, y **2 incidentes FATAL quedan clasificados como LEVE**. El sobre-triage cuesta una revisión desperdiciada; el sub-triage es el incidente que necesitaba atención y no se marcó. Una herramienta de triage con estos números es una ayuda de priorización para un revisor humano, no un filtro al que se le pueda permitir cerrar casos por su cuenta, y este repositorio no afirma lo contrario.
+
+![Composición del corpus: distribución de severidad y tipos de incidente](outputs/figures/corpus_composition.png)
+
+El desbalance de severidad en el corpus generado (GRAVE 71, FATAL 40, LEVE 33 — una brecha de 2,2x entre los extremos) es la causa más probable de que LEVE sea la clase más débil, incluso con `class_weight="balanced"` en la regresión logística.
+
+![Citation faithfulness por consulta](outputs/figures/citation_faithfulness.png)
+
+La citation faithfulness es 1,0 en 25 de 27 consultas. La métrica es hecha a medida y deliberadamente estrecha: verifica que cada artículo que la respuesta cita sea uno que efectivamente se recuperó, lo que atrapa una cita *fabricada* pero no una lectura equivocada de una real. No necesita un LLM juez, y eso es a propósito — todo el pipeline corre sin LLM externo, y una evaluación que requiriera uno socavaría eso.
 
 **Nota honesta sobre que Citation Faithfulness no sea exactamente 1,0**: 2 de las 27 respuestas en modo extractivo puntúan 0,8, no 1,0, aunque el backend extractivo solo cita artículos que efectivamente recuperó. La causa (verificada directamente): el propio texto del Artículo 76 contiene una referencia cruzada interna — *"...sin perjuicio de lo establecido en la letra b) del artículo 13 del presente reglamento"* — a un artículo fuera del extracto curado que nunca fue recuperado. La métrica de faithfulness basada en regex no puede distinguir esa referencia cruzada legítima dentro del texto de una cita real que el pipeline esté haciendo. Ambas consultas afectadas recuperan el Artículo 76, así que es una sola causa raíz, no dos fallas independientes — documentado acá en vez de ajustado para que desaparezca u ocultado.
 

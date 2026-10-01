@@ -35,7 +35,7 @@ This project automates both: a text classifier trained on incident narratives pr
 
 | Metric | Result | What it means |
 |---|---|---|
-| Severity classifier accuracy / F1-macro | 0.750 / 0.719 | Triages LEVE/GRAVE/FATAL incident narratives automatically |
+| Severity classifier accuracy / F1-macro | 0.750 / 0.719 (per class 0.556 / 0.875 / 0.727 — see §7) | Triages LEVE/GRAVE/FATAL incident narratives automatically |
 | Retrieval quality, MRR before/after re-ranking | 0.920 → **0.981** | Cross-Encoder re-ranking pushes the truly relevant article higher in the results, not just present somewhere in top-4 |
 | Retrieval quality, NDCG@4 before/after re-ranking | 0.940 → **0.986** | Rank-quality improvement, measured against a 27-query hand-labeled eval set |
 | Citation Faithfulness (extractive mode) | 0.985 | Purpose-built metric avoiding an LLM-judge, since the whole pipeline works 100% without an external LLM |
@@ -145,6 +145,7 @@ rag-seguridad-minera-chile/
 │   │   ├── pipeline.py             # Chunking, hybrid retriever, LLM backends
 │   │   ├── reranker.py             # Cross-Encoder re-ranking (stage 2)
 │   │   └── evaluation.py           # 27-query eval set + MRR/NDCG/faithfulness metrics
+│   ├── make_figures.py             # README figures, from the same pipeline and eval set
 │   ├── api/
 │   │   └── main.py                 # FastAPI: /classify-incident, /rag-query
 │   └── app/
@@ -259,7 +260,27 @@ All numbers below were produced by actually running the scripts in this repo (no
 | Citation Faithfulness (extractive backend) | 0.985 (2/27 queries at 0.8 — see note below) |
 | Test suite | 34/34 passing (`pytest`) |
 
+![What Cross-Encoder re-ranking changes](outputs/figures/reranking_rank_shift.png)
+
 **Honest note on Context Relevance@4 staying flat**: almost every query in the evaluation set has exactly one truly relevant article, and that article was already inside the hybrid retriever's top-4 *before* re-ranking — so precision@4 is capped at 1/4 = 0.250 in both conditions by construction of the dataset, not because re-ranking did nothing. What re-ranking changed is *where* that relevant article lands within the top-4, which is exactly what MRR and NDCG measure, and both improved.
+
+The left panel is that note made concrete, and it is the clearest way to read the MRR gain. Before re-ranking, 23 of 27 queries already put the right article at rank 1, 3 put it at rank 2 and 1 at rank 3. After re-ranking, **26 of 27 are at rank 1** and the remaining one is at rank 2. Nothing left the top-4 in either condition — which is precisely why precision@4 could not move — and no query got *worse*. A jump from 0.920 to 0.981 MRR sounds marginal; "three more queries now answer from the first result instead of the second or third" is the same fact in a form a reviewer can act on.
+
+![Severity classifier: confusion matrix and per-class scores](outputs/figures/severity_classifier.png)
+
+**Honest note on the classifier: the headline accuracy hides two things worth stating.**
+
+The first is spread. F1-macro is 0.719, but per class it runs 0.556 (LEVE), 0.875 (GRAVE), 0.727 (FATAL). The macro average is the mean of three quite different numbers, and LEVE — the smallest class, 33 of 144 — is the one the model handles worst.
+
+The second matters more for the use case. Severity is an *ordered* label, so the two kinds of mistake are not interchangeable. On the 36 held-out incidents, **5 are under-triaged** (predicted milder than they are) against 4 over-triaged, and **2 FATAL incidents are classified as LEVE**. Over-triage costs a wasted review; under-triage is the incident that needed attention and did not get flagged. A triage tool with these numbers is a prioritisation aid for a human reviewer, not a filter that can be allowed to close cases on its own, and this repository makes no claim otherwise.
+
+![Corpus composition: severity distribution and incident types](outputs/figures/corpus_composition.png)
+
+The severity imbalance in the generated corpus (GRAVE 71, FATAL 40, LEVE 33 — a 2.2x spread between the extremes) is the most likely reason LEVE is the weakest class, even with `class_weight="balanced"` in the logistic regression.
+
+![Citation faithfulness per query](outputs/figures/citation_faithfulness.png)
+
+Citation faithfulness is 1.0 on 25 of 27 queries. The metric is purpose-built and narrow on purpose: it checks that every article the answer cites is one that was actually retrieved, which catches a *fabricated* citation but not a wrong reading of a real one. It needs no LLM judge, which is deliberate — the whole pipeline runs without an external LLM, and an evaluation that required one would undercut that.
 
 **Honest note on Citation Faithfulness not being exactly 1.0**: 2 of the 27 extractive-mode answers score 0.8, not 1.0, even though the extractive backend only ever quotes articles it actually retrieved. The cause (verified directly): Article 76's own text contains an internal cross-reference — *"...sin perjuicio de lo establecido en la letra b) del artículo 13 del presente reglamento"* — to an article outside the curated excerpt that was never retrieved. The regex-based faithfulness metric can't distinguish that legitimate in-text cross-reference from an actual citation the pipeline is making. Both affected queries retrieve Article 76, so it's one root cause, not two independent failures — documented here rather than tuned away or hidden.
 
