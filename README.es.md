@@ -13,7 +13,7 @@
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)](https://streamlit.io/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-2%20notebooks-F37626)](02_Reranker_CrossEncoder_Evaluation.ipynb)
-[![Tests](https://img.shields.io/badge/tests-34%20passing-brightgreen)](tests/)
+[![Tests](https://img.shields.io/badge/tests-180%20passing-brightgreen)](tests/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 </div>
@@ -40,7 +40,7 @@ Este proyecto automatiza ambas tareas: un clasificador de texto entrenado sobre 
 | Calidad de recuperación, NDCG@4 antes/después del re-ranking | 0,940 → **0,986** | Mejora de calidad de ranking, medida contra un set de evaluación de 27 consultas etiquetadas a mano |
 | Citation Faithfulness (modo extractivo) | 0,985 | Métrica construida a medida evitando un LLM-juez, ya que todo el pipeline funciona 100% sin un LLM externo |
 | Ejemplos de recuperación verificados | Artículo 247 para "pértiga", artículos 157-162 para "fortificación/acuñadura" | Correctitud de recuperación concreta y verificable, no solo métricas agregadas |
-| Suite de tests | 34/34 pasando | Incluye chequeos de integridad del eval set (cada artículo real cubierto por al menos una consulta) |
+| Suite de tests | 180/180 pasando | Incluye chequeos de integridad del eval set (cada artículo real cubierto por al menos una consulta) |
 
 ## 2. Arquitectura
 
@@ -258,7 +258,7 @@ Todos los números a continuación fueron producidos ejecutando realmente los sc
 | NDCG@4 — antes / después del re-ranking | 0,940 → **0,986** |
 | Context Relevance@4 — antes / después del re-ranking | 0,250 → 0,250 (sin cambio — ver nota abajo) |
 | Citation Faithfulness (backend extractivo) | 0,985 (2/27 consultas en 0,8 — ver nota abajo) |
-| Suite de tests | 34/34 pasando (`pytest`) |
+| Suite de tests | 180/180 pasando (`pytest`) |
 
 ![Qué cambia el re-ranking con Cross-Encoder](outputs/figures/reranking_rank_shift.png)
 
@@ -284,6 +284,27 @@ La citation faithfulness es 1,0 en 25 de 27 consultas. La métrica es hecha a me
 
 **Nota honesta sobre que Citation Faithfulness no sea exactamente 1,0**: 2 de las 27 respuestas en modo extractivo puntúan 0,8, no 1,0, aunque el backend extractivo solo cita artículos que efectivamente recuperó. La causa (verificada directamente): el propio texto del Artículo 76 contiene una referencia cruzada interna — *"...sin perjuicio de lo establecido en la letra b) del artículo 13 del presente reglamento"* — a un artículo fuera del extracto curado que nunca fue recuperado. La métrica de faithfulness basada en regex no puede distinguir esa referencia cruzada legítima dentro del texto de una cita real que el pipeline esté haciendo. Ambas consultas afectadas recuperan el Artículo 76, así que es una sola causa raíz, no dos fallas independientes — documentado acá en vez de ajustado para que desaparezca u ocultado.
 
+### Evaluación cuantitativa de la respuesta y del contexto recuperado (arnés local)
+
+`src/evaluation/metrics/` puntúa una respuesta RAG con tres métricas deterministas que no necesitan juez LLM, API key ni red: **faithfulness** (fracción de las afirmaciones de la respuesta que el contexto recuperado respalda; una afirmación con una cifra que el contexto no tiene no cuenta como respaldada), **answer relevance** (similitud coseno entre pregunta y respuesta en un embedding léxico) y **context precision** (precisión ponderada por rango de los pasajes recuperados). Corren sobre las 27 preguntas del DS 132 del eval set.
+
+**Qué mide y qué no.** Corre en *modo mock*: la recuperación es un TF-IDF simple sobre los 27 artículos y la respuesta sigue el formato del backend extractivo. Eso valida el código de las métricas y fija una referencia reproducible; **no** mide el recuperador híbrido ni un LLM. Una respuesta extractiva copia su contexto, así que su faithfulness de 1,00 es alta por construcción. Las columnas informativas son los tres controles, que rompen la respuesta a propósito. Recuperación en este mock: MRR 0,944, hit@4 1,00.
+
+| Métrica (promedio de 27 preguntas) | Sistema extractivo | Respuesta con contexto al azar | Respuesta de otra pregunta | Respuesta con cifras alteradas |
+|---|---:|---:|---:|---:|
+| Faithfulness (fidelidad) | 1,00 | 0,19 | 0,09 | 0,94 |
+| Answer relevance (relevancia) | 0,30 | 0,30 | 0,08 | 0,30 |
+| Context precision (con etiquetas) | 0,94 | 0,07 | 0,94 | 0,94 |
+
+- **La faithfulness separa el texto respaldado del que no lo está**: 1,00 con el contexto correcto contra 0,19 con uno al azar y 0,09 con la respuesta de otra pregunta. La context precision hace lo mismo con la recuperación (0,94 contra 0,07 con pasajes al azar).
+- **La answer relevance solo se mueve cuando cambia la respuesta**: vale 0,30 en la primera, segunda y cuarta columnas porque el texto de la respuesta es el mismo, y cae a 0,08 cuando la respuesta es de otra pregunta. Su nivel absoluto es bajo porque la métrica es léxica y la redacción de la pregunta difiere de la del reglamento.
+- **Las cifras alteradas se detectan débilmente en promedio**: la faithfulness pasa de 1,00 a 0,94 (mínimo 0,82). Es una fracción por afirmación, así que cambiar las pocas cifras de una respuesta larga afecta solo las afirmaciones que las llevan. El 0,94 no debe leerse como "casi sin alucinación".
+- **Las métricas son léxicas.** Una paráfrasis que invierte el sentido ("debe" por "no debe") pasa. Detectarlo requiere un juez semántico (un LLM o un modelo de inferencia); estas métricas son el piso que corre sin red y en CI.
+
+El conjunto aparte de 36 preguntas de `src/evaluation/dataset/` (escenarios sintéticos de mantenimiento, proceso y seguridad con respuesta calculada) **no** forma parte de esta tabla. La mayoría de sus respuestas son valores derivados (un promedio, un porcentaje) que no aparecen literalmente en el contexto, así que la faithfulness de arriba no se les aplica tal como está.
+
+Se reproduce con `python -m src.evaluation.metrics.run_rag_eval` (escribe `tmp_agent_b/eval_results.json`, sin versionar) y `python -m src.evaluation.dataset.generator`.
+
 ## 8. Disclaimer normativo
 
 `data/ds132_sernageomin.txt` es un **extracto curado** del texto real y textual del **Decreto Supremo N° 132** (*Reglamento de Seguridad Minera*, SERNAGEOMIN, Chile), que cubre ~27 artículos sobre investigación/denuncia de accidentes, respuesta a emergencias, fortificación y acuñadura, ventilación, tronadura, seguridad vehicular en torno a CAEX, y sanciones. **No** es el reglamento completo de 592 artículos, y este sistema **no** reemplaza la consulta del texto oficial completo y vigente, ni a un profesional de prevención de riesgos o legal calificado. Fuentes:
@@ -298,7 +319,7 @@ El prompt de sistema del RAG instruye explícitamente al LLM a responder solo en
 ```powershell
 pytest -v
 ```
-34 tests que cubren invariantes de la generación del dataset, chunking del reglamento (sin artículos duplicados, contenido de artículos conocidos), relevancia del retrieval híbrido para dos temas independientes, validez de la salida del clasificador (conjunto de etiquetas, rangos de métricas, normalización de probabilidades), comportamiento del re-ranking Cross-Encoder (input vacío, reordenamiento correcto en un caso inequívoco, truncamiento top-k tras reordenar, scores descendentes), y el módulo de evaluación (MRR/NDCG/Context Relevance/Citation Faithfulness contra valores calculados a mano, más un chequeo de que los artículos de verdad base del set de 27 consultas efectivamente existen en el reglamento y cubren los 27 artículos indexados).
+180 tests (34 del pipeline, 64 del conjunto de preguntas sintéticas, 82 de las métricas de evaluación); los 34 originales cubren invariantes de la generación del dataset, chunking del reglamento (sin artículos duplicados, contenido de artículos conocidos), relevancia del retrieval híbrido para dos temas independientes, validez de la salida del clasificador (conjunto de etiquetas, rangos de métricas, normalización de probabilidades), comportamiento del re-ranking Cross-Encoder (input vacío, reordenamiento correcto en un caso inequívoco, truncamiento top-k tras reordenar, scores descendentes), y el módulo de evaluación (MRR/NDCG/Context Relevance/Citation Faithfulness contra valores calculados a mano, más un chequeo de que los artículos de verdad base del set de 27 consultas efectivamente existen en el reglamento y cubren los 27 artículos indexados).
 
 ## 10. Posibles extensiones
 

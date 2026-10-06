@@ -13,7 +13,7 @@
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)](https://streamlit.io/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-2%20notebooks-F37626)](02_Reranker_CrossEncoder_Evaluation.ipynb)
-[![Tests](https://img.shields.io/badge/tests-34%20passing-brightgreen)](tests/)
+[![Tests](https://img.shields.io/badge/tests-180%20passing-brightgreen)](tests/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 </div>
@@ -40,7 +40,7 @@ This project automates both: a text classifier trained on incident narratives pr
 | Retrieval quality, NDCG@4 before/after re-ranking | 0.940 → **0.986** | Rank-quality improvement, measured against a 27-query hand-labeled eval set |
 | Citation Faithfulness (extractive mode) | 0.985 | Purpose-built metric avoiding an LLM-judge, since the whole pipeline works 100% without an external LLM |
 | Verified retrieval examples | Article 247 for "pértiga", articles 157-162 for "fortificación/acuñadura" | Concrete, checkable retrieval correctness, not just aggregate metrics |
-| Test suite | 34/34 passing | Includes eval-set-integrity checks (every ground-truth article covered by at least one query) |
+| Test suite | 180/180 passing | Includes eval-set-integrity checks (every ground-truth article covered by at least one query) |
 
 ## 2. Architecture
 
@@ -258,7 +258,7 @@ All numbers below were produced by actually running the scripts in this repo (no
 | NDCG@4 — before / after re-ranking | 0.940 → **0.986** |
 | Context Relevance@4 — before / after re-ranking | 0.250 → 0.250 (unchanged — see note below) |
 | Citation Faithfulness (extractive backend) | 0.985 (2/27 queries at 0.8 — see note below) |
-| Test suite | 34/34 passing (`pytest`) |
+| Test suite | 180/180 passing (`pytest`) |
 
 ![What Cross-Encoder re-ranking changes](outputs/figures/reranking_rank_shift.png)
 
@@ -284,6 +284,27 @@ Citation faithfulness is 1.0 on 25 of 27 queries. The metric is purpose-built an
 
 **Honest note on Citation Faithfulness not being exactly 1.0**: 2 of the 27 extractive-mode answers score 0.8, not 1.0, even though the extractive backend only ever quotes articles it actually retrieved. The cause (verified directly): Article 76's own text contains an internal cross-reference — *"...sin perjuicio de lo establecido en la letra b) del artículo 13 del presente reglamento"* — to an article outside the curated excerpt that was never retrieved. The regex-based faithfulness metric can't distinguish that legitimate in-text cross-reference from an actual citation the pipeline is making. Both affected queries retrieve Article 76, so it's one root cause, not two independent failures — documented here rather than tuned away or hidden.
 
+### Quantitative evaluation of the answer and the retrieved context (local harness)
+
+`src/evaluation/metrics/` scores a RAG answer with three deterministic metrics that need no LLM judge, no API key and no network: **faithfulness** (share of the answer's claims that the retrieved context supports; a claim with a figure that the context lacks is not supported), **answer relevance** (cosine similarity between question and answer in a lexical embedding) and **context precision** (rank-weighted precision of the retrieved passages). They run on the 27 DS 132 questions of the evaluation set.
+
+**What this measures, and what it does not.** It runs in *mock mode*: retrieval is a plain TF-IDF over the 27 articles and the answer follows the extractive backend's format. That validates the metric code and fixes a reproducible reference; it does **not** measure the hybrid retriever or an LLM. An extractive answer copies its context, so its faithfulness of 1.00 is high by construction. The informative columns are the three controls, which break the answer on purpose. Retrieval in this mock: MRR 0.944, hit@4 1.00.
+
+| Metric (mean over 27 questions) | Extractive system | Answer with a random context | Answer from another question | Answer with its figures altered |
+|---|---:|---:|---:|---:|
+| Faithfulness | 1.00 | 0.19 | 0.09 | 0.94 |
+| Answer relevance | 0.30 | 0.30 | 0.08 | 0.30 |
+| Context precision (labelled) | 0.94 | 0.07 | 0.94 | 0.94 |
+
+- **Faithfulness separates grounded from ungrounded text**: 1.00 with the right context against 0.19 with a random one and 0.09 for another question's answer. Context precision does the same for retrieval (0.94 against 0.07 with random passages).
+- **Answer relevance only moves when the answer changes**: it is 0.30 in the first, second and fourth columns because the answer text is the same, and falls to 0.08 when the answer belongs to another question. Its absolute level is low because the metric is lexical and the question and the regulation's wording differ.
+- **Altered figures are detected weakly on average**: faithfulness goes from 1.00 to 0.94 (minimum 0.82). It is a per-claim fraction, so changing the few figures of a long answer affects only the claims that carry them. Do not read the 0.94 as "almost no hallucination".
+- **The metrics are lexical.** A paraphrase that reverses the meaning ("must" for "must not") passes. Detecting that needs a semantic judge (an LLM or an inference model); these metrics are the floor that runs offline and in CI.
+
+The separate 36-item question set in `src/evaluation/dataset/` (synthetic maintenance, process and safety scenarios with computed answers) is **not** part of this table. Most of its answers are derived values (an average, a percentage) that do not appear verbatim in the context, so the faithfulness above does not apply to them as it stands.
+
+Reproduce with `python -m src.evaluation.metrics.run_rag_eval` (writes `tmp_agent_b/eval_results.json`, not versioned) and `python -m src.evaluation.dataset.generator`.
+
 ## 8. Regulatory disclaimer
 
 `data/ds132_sernageomin.txt` is a **curated excerpt** of the real, verbatim text of **Decreto Supremo N° 132** (*Reglamento de Seguridad Minera*, SERNAGEOMIN, Chile), covering ~27 articles across accident investigation/reporting, emergency response, ground support (*fortificación y acuñadura*), ventilation, blasting, vehicle safety around CAEX, and sanctions. It is **not** the complete 592-article regulation, and this system is **not** a substitute for consulting the full, currently-in-force official text or a qualified prevention-risk / legal professional. Sources:
@@ -298,7 +319,7 @@ The RAG system prompt explicitly instructs the LLM to answer only from retrieved
 ```powershell
 pytest -v
 ```
-34 tests across dataset generation invariants, regulation chunking (no duplicate articles, known-article content), hybrid retrieval relevance for two independent topics, classifier output validity (label set, metric ranges, probability normalization), Cross-Encoder re-ranking behavior (empty input, correct reordering on an unambiguous case, top-k truncation after re-ordering, descending scores), and the evaluation module (MRR/NDCG/Context Relevance/Citation Faithfulness against hand-computed values, plus a check that the 27-query eval set's ground-truth articles actually exist in the regulation and cover all 27 indexed articles).
+180 tests (34 on the pipeline, 64 on the synthetic question set, 82 on the evaluation metrics); the original 34 cover dataset generation invariants, regulation chunking (no duplicate articles, known-article content), hybrid retrieval relevance for two independent topics, classifier output validity (label set, metric ranges, probability normalization), Cross-Encoder re-ranking behavior (empty input, correct reordering on an unambiguous case, top-k truncation after re-ordering, descending scores), and the evaluation module (MRR/NDCG/Context Relevance/Citation Faithfulness against hand-computed values, plus a check that the 27-query eval set's ground-truth articles actually exist in the regulation and cover all 27 indexed articles).
 
 ## 10. Possible extensions
 
