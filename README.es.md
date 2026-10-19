@@ -4,7 +4,7 @@
 
 **Sistema de NLP + RAG para clasificación de incidentes y consulta normativa sobre seguridad minera chilena (DS 132)**
 
-🌐 **[English](README.md)** | **[Español](README.es.md)**
+[[English](README.md) ] | [Español ]
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
 [![LangChain](https://img.shields.io/badge/LangChain-1.x-1C3C3C)](https://python.langchain.com/)

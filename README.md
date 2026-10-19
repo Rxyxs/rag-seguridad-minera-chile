@@ -4,7 +4,7 @@
 
 **NLP + RAG system for incident classification and regulatory Q&A on Chilean mining safety law (DS 132)**
 
-🌐 **[English](README.md)** | **[Español](README.es.md)**
+[English ] | [[Español](README.es.md) ]
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
 [![LangChain](https://img.shields.io/badge/LangChain-1.x-1C3C3C)](https://python.langchain.com/)
