@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>⛑️ RAG Seguridad Minera Chile</title>
-<meta name="description" content="**NLP + RAG system for incident classification and regulatory Q&amp;A on Chilean mining safety law (DS 132)**">
+<meta name="description" content="NLP + RAG system for incident classification and regulatory Q&amp;A on Chilean mining safety law (DS 132)">
 <style>
   :root { --bg:#FBFAF8; --surface:#FFF; --ink:#23201D; --muted:#6B645D; --line:#E3DED7; --accent:#B5553D; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
@@ -47,7 +47,7 @@
 <h2>7. Validated results</h2>
 <figure>
 <img src="figures/reranking_rank_shift.png" alt="What Cross-Encoder re-ranking changes" loading="lazy">
-<figcaption><strong>Honest note on Context Relevance@4 staying flat</strong>: almost every query in the evaluation set has exactly one truly relevant article, and that article was already inside the hybrid retriever&#x27;s top-4 *before* re-ranking — so precision@4 is capped at 1/4 = 0.250 in both conditions by construction of the dataset, not because re-ranking did nothing. What re-ranking changed is *where* that relevant article lands within the top-4, which is exactly what MRR and NDCG measure, and both improved.</figcaption>
+<figcaption><strong>Honest note on Context Relevance@4 staying flat</strong>: almost every query in the evaluation set has exactly one truly relevant article, and that article was already inside the hybrid retriever&#x27;s top-4 <em>before</em> re-ranking — so precision@4 is capped at 1/4 = 0.250 in both conditions by construction of the dataset, not because re-ranking did nothing. What re-ranking changed is <em>where</em> that relevant article lands within the top-4, which is exactly what MRR and NDCG measure, and both improved.</figcaption>
 </figure>
 <figure>
 <img src="figures/severity_classifier.png" alt="Severity classifier: confusion matrix and per-class scores" loading="lazy">
@@ -59,7 +59,7 @@
 </figure>
 <figure>
 <img src="figures/citation_faithfulness.png" alt="Citation faithfulness per query" loading="lazy">
-<figcaption>Citation faithfulness is 1.0 on 25 of 27 queries. The metric is purpose-built and narrow on purpose: it checks that every article the answer cites is one that was actually retrieved, which catches a *fabricated* citation but not a wrong reading of a real one. It needs no LLM judge, which is deliberate — the whole pipeline runs without an external LLM, and an evaluation that required one would undercut that.</figcaption>
+<figcaption>Citation faithfulness is 1.0 on 25 of 27 queries. The metric is purpose-built and narrow on purpose: it checks that every article the answer cites is one that was actually retrieved, which catches a <em>fabricated</em> citation but not a wrong reading of a real one. It needs no LLM judge, which is deliberate — the whole pipeline runs without an external LLM, and an evaluation that required one would undercut that.</figcaption>
 </figure>
 <footer>
 Pablo Reyes · <a href="https://github.com/Rxyxs/rag-seguridad-minera-chile">github.com/Rxyxs/rag-seguridad-minera-chile</a> · MIT<br><br>
